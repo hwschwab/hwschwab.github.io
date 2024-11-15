@@ -1,0 +1,33 @@
+body {
+    font-family: $font-family-base;
+    line-height: $line-height-base;
+    color: $text-color;
+    margin: 0;
+    padding: 0;
+}
+
+.page-wrapper {
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 0 $card-padding;
+
+    @include mobile {
+        padding: 0 $spacing-unit;
+    }
+}
+
+.section {
+    margin: $section-spacing 0;
+
+    h2 {
+        color: $primary-color;
+        font-size: 2rem;
+        margin-bottom: $card-padding;
+    }
+}
+
+// Links
+a {
+    text-decoration: none;
+    @include transition;
+}

@@ -1,0 +1,19 @@
+<div class="social-links">
+    {% if site.github_username %}
+    <a href="https://github.com/{{ site.github_username }}" target="_blank" aria-label="GitHub">
+        {% include icon-github.html %}
+    </a>
+    {% endif %}
+
+    {% if site.linkedin_username %}
+    <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" target="_blank" aria-label="LinkedIn">
+        {% include icon-linkedin.html %}
+    </a>
+    {% endif %}
+
+    {% if site.email %}
+    <a href="mailto:{{ site.email }}" aria-label="Email">
+        {% include icon-email.html %}
+    </a>
+    {% endif %}
+</div>

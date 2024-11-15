@@ -1,0 +1,20 @@
+- title: Programming & Statistical Analysis
+  courses:
+    - Introduction to Data Science I & II
+    - Computer Science for Data Science
+    - Introduction to Machine Learning
+    - Software Engineering for Data Science
+
+- title: Data Analysis & Visualization
+  courses:
+    - Models in Data Science
+    - Visualization for Data Science
+    - Data Science Clinic I & II
+    - Complex Trait Genetics
+
+- title: Data Governance & Ethics
+  courses:
+    - Technology and Human Rights
+    - Digitizing Human Rights
+    - Ethics, Fairness, Responsibility, and Privacy
+    - Statistical Pitfalls and Misinterpretation

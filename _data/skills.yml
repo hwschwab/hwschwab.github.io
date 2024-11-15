@@ -1,0 +1,28 @@
+- name: Python
+  level: Advanced
+- name: R
+  level: Intermediate
+- name: JavaScript
+  level: null
+- name: HTML/CSS
+  level: null
+- name: Git
+  level: null
+- name: Docker
+  level: null
+- name: SQL
+  level: null
+- name: Django
+  level: null
+- name: Flask
+  level: null
+- name: D3.js
+  level: null
+- name: Machine Learning
+  level: null
+- name: Statistical Analysis
+  level: null
+- name: Data Visualization
+  level: null
+- name: ETL Pipeline Development
+  level: null
