@@ -28,8 +28,3 @@ className: home-page
   </div>
 </div>
 {% endfor %}
-
-## Contact
-
-Currently I am looking for full time positions or impactful internships, I would love to connect! Click the contact buttons in the footer.
-

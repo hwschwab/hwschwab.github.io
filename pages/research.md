@@ -4,28 +4,28 @@ title: Publications & Research
 permalink: /research/
 className: research-page
 ---
-
 {% for publication in site.data.publications %}
 <div class="publication-card">
-  <h3 class="publication-title">{{ publication.title }}</h3>
-  
-  <div class="publication-authors">
-    {{ publication.authors | join: ", " }}
+  <div class="chicago-citation">
+    {% assign authors_array = publication.authors %}
+    {% assign author_count = authors_array | size %}
+    
+    {% for author in authors_array %}
+      {% if forloop.last and author_count > 1 %}and {% endif %}
+      {{ author }}{% unless forloop.last and author_count == 2 %}{% if forloop.last %}.{% else %}, {% endif %}{% endunless %}
+    {% endfor %}
+    
+    "{{ publication.title }}." 
+    <em>{{ publication.venue }}</em> 
+    ({{ publication.date }}){% if publication.link %}, 
+    {{ publication.link }}{% endif %}.
   </div>
-  
-  <div class="publication-meta">
-    {{ publication.date }} {{ publication.venue }}
-  </div>
-  
+
   <div class="publication-tags">
     {% for tag in publication.tags %}
-    <span class="publication-tag">{{ tag }}</span>
+    <span class="tag">{{ tag }}</span>
     {% endfor %}
   </div>
-  
-  {% if publication.link %}
-  <a href="{{ publication.link }}" class="publication-link" target="_blank">View Publication</a>
-  {% endif %}
 </div>
 {% endfor %}
 

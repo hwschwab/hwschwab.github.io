@@ -56,18 +56,55 @@
   }
 }
 
-// Publication Cards
+
+// PUBLICATION
 .publication-card {
-  @extend .card;
-  margin-bottom: map-get($spacing, 'card');
+  border: 1px solid map-get($colors, 'border');
+  border-radius: 8px;
+  padding: map-get($spacing, 'card');
+  margin-bottom: map-get($spacing, 'large');
+  background: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease;
+  }
 }
 
-.publication-meta {
-  color: map-get($colors, 'medium-gray');
+.chicago-citation {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: map-get($colors, 'text');
   margin-bottom: map-get($spacing, 'unit');
+}
 
-  span {
-    margin-right: map-get($spacing, 'card');
+.publication-tags {
+  margin-top: map-get($spacing, 'card');
+  display: flex;
+  flex-wrap: wrap;
+  gap: map-get($spacing, 'unit');
+  
+  .tag {
+    background: map-get($colors, 'tag-bg');
+    padding: 0.25rem 0.75rem;
+    border-radius: 16px;
+    font-size: 0.875rem;
+    color: map-get($colors, 'medium-gray');
+    
+  }
+}
+
+em {
+  font-style: italic;
+}
+
+a {
+  color: map-get($colors, 'link');
+  text-decoration: none;
+  
+  &:hover {
+    text-decoration: underline;
   }
 }
 
