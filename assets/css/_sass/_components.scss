@@ -130,14 +130,15 @@ a {
   @include mobile {
     flex-direction: column;
     text-align: center;
-    gap: map-get($spacing, 'unit');
+    padding: map-get($spacing, 'unit');
+    position: relative;
   }
 }
 
 .site-header {
   background: map-get($colors, 'primary');
   width: 100%;
-  padding: 1rem 2rem;
+  padding: 1rem;
   position: fixed;
   top: 0;
   left: 0;
@@ -146,7 +147,6 @@ a {
 
   .header-wrapper {
     @extend %site-wrapper;
-    align-items: center;
   }
 
   .site-title {
@@ -154,6 +154,13 @@ a {
     text-decoration: none;
     font-size: 1.5rem;
     font-weight: bold;
+    z-index: 1001; // Keep title above mobile menu
+  }
+
+  .main-nav {
+    @include mobile {
+      width: 100%;
+    }
   }
 
   .nav-list {
@@ -161,14 +168,22 @@ a {
     list-style: none;
     margin: 0;
     padding: 0;
+    gap: 1rem;
 
     @include mobile {
       flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
       width: 100%;
+      background: map-get($colors, 'primary');
+      padding: 1rem 0;
       display: none;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
-      &.active {
-        display: flex;
+      li {
+        width: 100%;
+        text-align: center;
       }
     }
   }
@@ -177,58 +192,76 @@ a {
     color: #fff;
     text-decoration: none;
     padding: 0.5rem 1rem;
-    transition: color 0.3s;
+    transition: all 0.3s ease;
+    display: block;
 
-    &:hover {
-      color: rgba(255, 255, 255, 0.8);
+    @include mobile {
+      padding: 1rem;
+      width: 100%;
+      
+      &:hover {
+        background: rgba(255, 255, 255, 0.1);
+      }
     }
   }
 
   .nav-toggle {
     display: none;
 
-    @include mobile {
-      &:checked ~ .nav-list {
-        display: flex;
+    &:checked {
+      @include mobile {
+        & ~ .nav-list {
+          display: flex;
+        }
+
+        & ~ .nav-toggle-label span {
+          &:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+          }
+
+          &:nth-child(2) {
+            opacity: 0;
+          }
+
+          &:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+          }
+        }
       }
     }
   }
 
   .nav-toggle-label {
     display: none;
-    cursor: pointer;
-
+    
     @include mobile {
       display: block;
       position: absolute;
-      top: 1rem;
       right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
       width: 30px;
       height: 24px;
+      cursor: pointer;
+      z-index: 1001;
 
       span {
+        display: block;
         position: absolute;
-        width: 100%;
         height: 2px;
+        width: 100%;
         background: #fff;
-        transition: transform 0.3s;
+        transition: all 0.3s ease;
 
-        &:nth-child(1) {
-          top: 0;
-        }
-
-        &:nth-child(2) {
-          top: 50%;
-          transform: translateY(-50%);
-        }
-
-        &:nth-child(3) {
-          bottom: 0;
-        }
+        &:nth-child(1) { top: 0; }
+        &:nth-child(2) { top: 50%; transform: translateY(-50%); }
+        &:nth-child(3) { bottom: 0; }
       }
     }
   }
 }
+
+
 
 .site-footer {
   background: map-get($colors, 'primary');
