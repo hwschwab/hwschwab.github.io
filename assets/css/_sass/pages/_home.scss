@@ -1,0 +1,9 @@
+.home-page {
+  .activities-intro {
+    margin-bottom: map-get($spacing, 'section');
+  }
+
+  .social-links {
+    margin-top: map-get($spacing, 'section');
+  }
+}

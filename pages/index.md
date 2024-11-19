@@ -2,6 +2,7 @@
 layout: home
 title: Home
 permalink: /
+className: home-page
 ---
 
 ## About Me
@@ -30,10 +31,5 @@ permalink: /
 
 ## Contact
 
-Currently I am looking for full time positions or impactful internships, I would love to connect!
+Currently I am looking for full time positions or impactful internships, I would love to connect! Click the contact buttons in the footer.
 
-<div class="social-links">
-  <a href="https://github.com/hwschwab" aria-label="GitHub">{% include icon-github.html %}</a>
-  <a href="https://www.linkedin.com/in/harper-schwab/" aria-label="LinkedIn">{% include icon-linkedin.html %}</a>
-  <a href="mailto:hwschwab@uchicago.edu" aria-label="Email">{% include icon-email.html %}</a>
-</div>

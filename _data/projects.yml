@@ -1,0 +1,48 @@
+- title: "Life Sentences: Prison Death Data Analysis"
+  description: >
+    Analyzed the relationship between privatized healthcare in prisons and inmate mortality
+    rates using data from Reuters News (2008-2019). Employed various machine learning models
+    including Random Forest and CART to identify key factors differentiating public and private
+    healthcare facilities. Found significant correlations between private healthcare providers
+    and increased suicide rates, with private facilities showing consistently higher death
+    percentages relative to population.
+  keywords:
+    - Machine Learning
+    - Data Visualization
+    - Python
+    - scikit-learn
+    - Principal Component Analysis (PCA)
+    - Criminal Justice
+    - Healthcare Policy
+
+- title: "Healthcare Access in Appalachia"
+  description: >
+    Investigated healthcare disparities in the Appalachian region through analysis of economic,
+    social, and physical barriers to access. Examined the impact of local organizations like
+    Dogwood Health Trust in addressing healthcare needs. Research highlighted how community-focused
+    approaches and understanding local contexts are crucial for improving healthcare outcomes
+    in rural Appalachian communities.
+  keywords:
+    - Healthcare Policy
+    - Rural Health
+    - Qualitative Research
+    - Policy Analysis
+    - Public Health
+    - Community Development
+    - Interview Analysis
+
+- title: "Funding and Incentive: North Carolina and the Detention Marketplace"
+  description: >
+    Researched the impact of ICE's 287(g) agreements and funding incentives on detention
+    centers, focusing on North Carolina's detention system. Analysis revealed how financial
+    incentives create a "detention marketplace" that affects facility operations and detention
+    practices. Study included examination of demographic data and policy impacts, particularly
+    regarding proposed legislation like NC House Bill 10.
+  keywords:
+    - Immigration Policy
+    - Public Policy Analysis
+    - Legislative Research
+    - Demographic Analysis
+    - Criminal Justice
+    - Policy Implementation
+    - Federal-State Relations

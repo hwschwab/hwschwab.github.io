@@ -2,8 +2,11 @@
 layout: page
 title: Blog
 permalink: /blog/
+className: blog-page
 ---
 
+<div> This will be populated soon!</div>
+<!-- 
 <div class="blog-grid">
   {% for post in site.posts %}
   <div class="blog-content">
@@ -18,4 +21,4 @@ permalink: /blog/
     <a href="{{ post.url | relative_url }}" class="read-more">Read More</a>
   </div>
   {% endfor %}
-</div>
+</div> -->

@@ -1,18 +1,20 @@
 # Site settings
 title: Harper Schwab
 email: hwschwab@uchicago.edu
-description: >-
+description: 
   Data Science & Human Rights student at the University of Chicago, 
   focusing on privacy, ethics, and the intersection of technology and human rights.
 baseurl: "" # leave empty if your site is at username.github.io
 url: "https://hwschwab.github.io"
+include: ["pages"]
 github_username: hwschwab
 linkedin_username: harper-schwab
+show_downloads: false
 
 # Build settings
 markdown: kramdown
-theme: minima  # Add this line
-remote_theme: jekyll/minima # Add this line for GitHub Pages
+theme: jekyll-theme-minimal
+
 
 plugins:
   - jekyll-feed
@@ -51,5 +53,7 @@ exclude:
   - CNAME
 
 sass:
-  sass_dir: _sass
+  sass_dir: assets/css/_sass
   style: compressed
+  load_paths:
+    - assets/css/_sass

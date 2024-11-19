@@ -302,7 +302,13 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages (~> 228)
-  jekyll (~> 3.9.3)
+  http_parser.rb (~> 0.6.0)
+  jekyll-feed (~> 0.15)
+  jekyll-seo-tag (~> 2.8)
+  jekyll-theme-minimal (~> 0.2.0)
+  tzinfo (>= 1)
+  tzinfo-data
+  wdm (~> 0.1.1)
   webrick (~> 1.8)
 
 BUNDLED WITH

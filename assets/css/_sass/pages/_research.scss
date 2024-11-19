@@ -1,0 +1,30 @@
+.research-page {
+  .project-card {
+    .keywords-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.25rem; // Increased gap for better spacing
+      margin-top: 1rem;
+
+      .keyword {
+        background-color: map-get($colors, 'light-gray');
+        color: map-get($colors, 'dark-gray');
+        padding: 0.25rem 0.25rem; // Increased padding
+        border-radius: 10px; // Slightly larger radius
+        font-size: 0.875rem;
+        transition: all 0.2s ease;
+        margin: 0.25rem; // Added margin for more separation
+        white-space: nowrap; // Prevents text wrapping within tags
+        
+        // Optional: add a subtle border
+        border: 1px solid rgba(0, 0, 0, 0.1);
+
+        &:hover {
+          background-color: map-get($colors, 'primary');
+          color: white;
+          transform: translateY(-1px);
+        }
+      }
+    }
+  }
+}

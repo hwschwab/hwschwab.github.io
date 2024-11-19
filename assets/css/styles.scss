@@ -1,7 +1,20 @@
 ---
 ---
-@import "variables";
-@import "base";
-@import "layout";
-@import "components";
-@import "skills";
+
+// First import variables
+@import 'variables';
+
+// Then mixins that use those variables
+@import 'mixins';
+
+// Then base components and layouts
+@import 'components';
+@import 'base';
+@import 'layout';
+
+// Finally page-specific styles
+@import 'pages/blog';
+@import 'pages/skills';
+@import 'pages/research';
+@import 'pages/experience';
+@import 'pages/home';

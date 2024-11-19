@@ -1,0 +1,90 @@
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid map-get($colors, 'white');
+    box-shadow: map-get($shadows, 'header');
+
+    @include mobile {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+.main-nav {
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 1.5rem 0 0;
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+
+        @include mobile {
+            flex-direction: column;
+            gap: 1rem;
+        }
+    }
+
+    a {
+        color: map-get($colors, 'white');
+        padding: 0.5rem;
+        @include transition(color);
+
+        &:hover {
+            color: rgba(map-get($colors, 'white'), 0.8);
+        }
+    }
+}
+
+.experience-section {
+    margin-bottom: map-get($spacing, 'section');
+}
+
+.experience-item {
+    margin-bottom: 2.5rem;
+    padding-bottom: map-get($spacing, 'card');
+    border-bottom: 1px solid #eee;
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: map-get($spacing, 'unit');
+
+    @include mobile {
+        flex-direction: column;
+    }
+}
+
+.organization {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: map-get($colors, 'primary');
+}
+
+.role {
+    color: map-get($colors, 'secondary');
+    margin-top: 0.25rem;
+}
+
+.date {
+    color: map-get($colors, 'medium-gray');
+    @include mobile {
+        margin-top: 0.5rem;
+    }
+}
+
+.subtitle {
+    color: map-get($colors, 'secondary');
+}
+
+.main-content {
+    flex: 1;
+    width: 100%;
+    max-width: map-get($layout, 'max-width');
+    margin: 100px auto 0;
+    padding: 2rem map-get($spacing, 'unit') 0;
+}

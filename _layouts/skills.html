@@ -1,14 +1,75 @@
 ---
 layout: default
 ---
-<article class="skills-page">
-    <div class="skills-content">
-        {{ content }}
-    </div>
+<!-- Load D3.js -->
+<script src="https://d3js.org/d3.v7.min.js"></script>
 
-    <!-- Load D3.js -->
-    <script src="https://d3js.org/d3.v7.min.js"></script>
+<div class="page-content">
+  {{ content }}
+</div>
 
-    <script src="{{ '/assets/js/init-skills.js' | relative_url }}"></script>
+<!-- Load your visualization scripts -->
+<script src="{{ site.baseurl }}/assets/js/skills-visualization.js" type="module"></script>
+<script src="{{ site.baseurl }}/assets/js/init-skills.js" type="module"></script>
 
-</article>
+<style>
+.skills-visualization-container {
+    width: 100%;
+    height: 800px;
+    position: relative;
+    margin: 2rem 0;
+}
+
+.skills-tooltip {
+    position: absolute;
+    pointer-events: none;
+}
+
+.skills-legend {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.skills-visualization-container {
+    width: 100%;
+    height: 600px;
+    position: relative;
+    margin: 2rem auto;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background: #ffffff;
+    overflow: hidden;
+    max-width: 900px; /* Match visualization width */
+    }
+
+.skills-tooltip {
+    position: absolute;
+    pointer-events: none;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    max-width: 300px;
+    font-size: 14px;
+    line-height: 1.4;
+    z-index: 1000;
+    transition: all 0.1s ease;
+}
+
+/* Add these styles for better page layout */
+.page-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Additional styles for the legend and reset button positioning */
+.skills-legend {
+    top: 10px !important;
+    left: 10px !important;
+}
+
+.reset-button {
+    top: 10px !important;
+    right: 10px !important;
+}
+</style>

@@ -1,37 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="{{ site.lang | default: 'en-US' }}">
+  <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
     <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
-    {% seo %}
-</head>
-<body>
-    <header class="site-header">
-        <div class="header-wrapper">
-            <a href="{{ '/' | relative_url }}" class="site-title">{{ site.title }}</a>
-            <nav class="site-nav">
-                <a href="{{ '/skills/' | relative_url }}">Skills</a>
-                <a href="{{ '/research/' | relative_url }}">Research</a>
-                <a href="{{ '/experience/' | relative_url }}">Experience</a>
-                <a href="{{ '/blog/' | relative_url }}">Blog</a>
-            </nav>
-        </div>
-    </header>
-
-    <main class="main-content" role="main">
+  </head>
+  <body class="{{ page.className }}">
+    {% include header.html %}
+    <main class="main-content">
+      <div class="wrapper">
         {{ content }}
-        {% if page.url contains 'skills' %}
-        <script src="{{ '/assets/js/skills-visualization.js' | relative_url }}"></script>
-        {% endif %}
+      </div>
     </main>
-
-    <footer class="site-footer">
-        <div class="footer-wrapper">
-            {% include social-icons.html %}
-            <p class="footer-text">{{ site.description }}</p>
-        </div>
-    </footer>
-</body>
+    {% include footer.html %}
+  </body>
 </html>

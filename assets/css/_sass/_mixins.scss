@@ -1,0 +1,28 @@
+@mixin transition($property: all, $duration: 0.2s) {
+  transition: $property $duration ease-in-out;
+}
+
+@mixin mobile {
+  @media (max-width: map-get($layout, 'mobile-breakpoint')) {
+    @content;
+  }
+}
+
+@mixin card {
+  background: map-get($colors, 'white');
+  padding: map-get($spacing, 'card');
+  border-radius: map-get($layout, 'border-radius');
+  box-shadow: map-get($shadows, 'card');
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin grid-responsive {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: map-get($spacing, 'card');
+}

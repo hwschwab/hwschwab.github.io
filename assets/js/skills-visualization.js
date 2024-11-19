@@ -1,11 +1,18 @@
-// skills-visualization.js
 export default class SkillsVisualization {
     constructor(containerId) {
         this.containerId = containerId;
-        this.width = 1200;
-        this.height = 800;
+        this.width = 900;
+        this.height = 300;
         
-        // Complete data structure
+        this.categoryColors = {
+            "Position": "#FF6B6B",      // Coral red
+            "Technical": "#2b4c7e",      // Deep blue
+            "Research": "#567eae",       // Medium blue
+            "Leadership": "#88a8d5",     // Light blue
+            "Communication": "#1e3a5f",  // Dark blue
+            "Domain": "#6a89cc"          // Steel blue
+        };
+        
         this.data = {
             nodes: [
                 // Position nodes
@@ -34,7 +41,6 @@ export default class SkillsVisualization {
                 { id: "Team Management", category: "Leadership", level: 3, description: "Leading and coordinating teams of 60+ members in Model UN" },
                 { id: "Budget Management", category: "Leadership", level: 3, description: "Managing and allocating $78,000+ annual budget" },
                 { id: "Training Development", category: "Leadership", level: 2, description: "Creating and implementing training programs for team members" },
-                
 
                 // Communication nodes
                 { id: "Public Speaking", category: "Communication", level: 3, description: "Presenting at conferences and leading team training sessions" },
@@ -52,6 +58,8 @@ export default class SkillsVisualization {
                 { source: "Python", target: "Statistical Analysis", strength: 3 },
                 { source: "Python", target: "Machine Learning", strength: 2 },
                 { source: "Web Development", target: "Data Visualization", strength: 2 },
+                { source: "Machine Learning", target: "Data Ethics", strength: 2 },
+                { source: "Machine Learning", target: "Data Visualization", strength: 2 },
 
                 // Research Connections
                 { source: "Privacy Policy Analysis", target: "Privacy Rights", strength: 3 },
@@ -61,6 +69,7 @@ export default class SkillsVisualization {
 
                 // Position to Technical
                 { source: "Data Science TA", target: "Python", strength: 3 },
+                { source: "Data Science TA", target: "Machine Learning", strength: 3 },
                 { source: "Data Cognition Lab", target: "Python", strength: 3 },
                 { source: "Data Cognition Lab", target: "Data Visualization", strength: 3 },
                 { source: "Data Cognition Lab", target: "Academic Writing", strength: 2 },
@@ -88,8 +97,6 @@ export default class SkillsVisualization {
                 { source: "Folkmoot Guide", target: "International Relations", strength: 2 },
                 { source: "Data Science TA", target: "Data Ethics", strength: 2 },
 
-
-
                 // Leadership & Domain Connections
                 { source: "MUN President", target: "International Relations", strength: 3 },
                 { source: "Team Management", target: "Cross-cultural Communication", strength: 2 },
@@ -111,53 +118,72 @@ export default class SkillsVisualization {
                 // Leadership & Communication
                 { source: "Team Management", target: "Public Speaking", strength: 2 },
                 { source: "Training Development", target: "Cross-cultural Communication", strength: 2 }
-                
             ]
         };
 
-        this.categoryColors = {
-            "Position": "#FF6B6B",      // Coral red
-            "Technical": "#2b4c7e",      // Deep blue
-            "Research": "#567eae",       // Medium blue
-            "Leadership": "#88a8d5",     // Light blue
-            "Communication": "#1e3a5f",  // Dark blue
-            "Domain": "#6a89cc"          // Steel blue
-        };
+        // Initialize node positions and create node map
+        this.data.nodes = this.data.nodes.map(node => ({
+            ...node,
+            x: this.width / 2 + (Math.random() - 0.5) * 100,
+            y: this.height / 2 + (Math.random() - 0.5) * 100,
+            vx: 0,
+            vy: 0
+        }));
+
+        // Create a map of nodes for easy lookup
+        this.nodeMap = new Map(this.data.nodes.map(node => [node.id, node]));
+
+        // Convert link references to actual node objects
+        this.data.links = this.data.links.map(link => ({
+            source: this.nodeMap.get(link.source) || link.source,
+            target: this.nodeMap.get(link.target) || link.target,
+            strength: link.strength
+        }));
     }
 
     initialize() {
-        // Create SVG container
-        this.svg = d3.select(`#${this.containerId}`)
+        // Create SVG container with zoom support
+        const svg = d3.select(`#${this.containerId}`)
             .append("svg")
             .attr("viewBox", `0 0 ${this.width} ${this.height}`)
             .attr("width", "100%")
             .attr("height", "100%")
             .style("background", "#ffffff");
 
-        // Create legend
-        this.createLegend();
+        // Store zoom behavior as class property
+        this.zoom = d3.zoom()
+            .scaleExtent([0.5, 3])
+            .on("zoom", (event) => {
+                mainGroup.attr("transform", event.transform);
+            });
 
-        // Create tooltip
-        this.createTooltip();
+        svg.call(this.zoom);
 
-        // Initialize force simulation
+        // Main group for all visualization elements
+        this.svg = svg;
+        const mainGroup = svg.append("g");
+        this.mainGroup = mainGroup;
+
+        // Initialize force simulation with adjusted parameters
         this.simulation = d3.forceSimulation(this.data.nodes)
             .force("link", d3.forceLink(this.data.links)
                 .id(d => d.id)
-                .distance(80))  // Reduced from 120
-            .force("charge", d3.forceManyBody().strength(-200))  // Changed from -300
+                .distance(60))
+            .force("charge", d3.forceManyBody().strength(-150))
             .force("center", d3.forceCenter(this.width / 2, this.height / 2))
-            .force("collision", d3.forceCollide().radius(40));  // Reduced from 50
-        // Create links and nodes
+            .force("collision", d3.forceCollide().radius(30));
+
+        // Create legend, tooltip, links, nodes
+        this.createLegend();
+        this.createTooltip();
         this.createLinks();
         this.createNodes();
-
-        // Add interactions
         this.addInteractions();
+        this.addResetButton();
     }
 
     createLegend() {
-        const legend = d3.select("#skills-container")  
+        const legend = d3.select(`#${this.containerId}`)
             .append("div")
             .attr("class", "skills-legend")
             .style("position", "absolute")
@@ -192,7 +218,7 @@ export default class SkillsVisualization {
         this.tooltip = d3.select(`#${this.containerId}`)
             .append("div")
             .attr("class", "skills-tooltip")
-            .style("position", "absolute")
+            .style("position", "fixed") // Change to fixed positioning
             .style("visibility", "hidden")
             .style("background-color", "rgba(255, 255, 255, 0.95)")
             .style("padding", "15px")
@@ -201,11 +227,14 @@ export default class SkillsVisualization {
             .style("max-width", "300px")
             .style("font-size", "14px")
             .style("line-height", "1.4")
-            .style("z-index", "1000");
+            .style("z-index", "1000")
+            .style("pointer-events", "none")
+            .style("transform", "translate(-50%, -100%)") // Center above cursor
+            .style("margin-top", "-20px"); // Add some space above cursor
     }
 
     createLinks() {
-        this.link = this.svg.append("g")
+        this.link = this.mainGroup.append("g")
             .attr("class", "links")
             .selectAll("line")
             .data(this.data.links)
@@ -216,7 +245,7 @@ export default class SkillsVisualization {
     }
 
     createNodes() {
-        this.node = this.svg.append("g")
+        this.node = this.mainGroup.append("g")
             .attr("class", "nodes")
             .selectAll("g")
             .data(this.data.nodes)
@@ -259,7 +288,7 @@ export default class SkillsVisualization {
                 link.source.id === d.id || link.target.id === d.id ? 1 : 0.1
             );
             
-            this.tooltip.html(`
+            const tooltipContent = `
                 <div style="border-bottom: 2px solid ${this.categoryColors[d.category]}; margin-bottom: 8px; padding-bottom: 8px;">
                     <strong style="font-size: 16px;">${d.id}</strong>
                     <div style="color: #666;">${d.category}</div>
@@ -270,16 +299,25 @@ export default class SkillsVisualization {
                         Connected to ${connections.length} skills/experiences
                     </div>` : 
                     ''}
-            `)
-            .style("visibility", "visible")
-            .style("left", `${event.offsetX + 10}px`)
-            .style("top", `${event.offsetY + 10}px`);
+            `;
+            
+            this.tooltip
+                .html(tooltipContent)
+                .style("visibility", "visible");
+
+            this.updateTooltipPosition(event);
+        })
+        .on("mousemove", (event) => {
+            if (this.tooltip.style("visibility") === "visible") {
+                this.updateTooltipPosition(event);
+            }
         })
         .on("mouseout", () => {
             this.node.style("opacity", 1);
             this.link.style("opacity", 0.6);
             this.tooltip.style("visibility", "hidden");
         });
+
 
         this.simulation.on("tick", () => {
             this.link
@@ -291,6 +329,88 @@ export default class SkillsVisualization {
             this.node
                 .attr("transform", d => `translate(${d.x},${d.y})`);
         });
+    }
+
+    updateTooltipPosition(event) {
+        // Get the scroll position
+        const scrollX = window.pageXOffset || document.documentElement.scrollLeft;
+        const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+        
+        // Get the container's position
+        const containerRect = document.getElementById(this.containerId).getBoundingClientRect();
+        
+        // Calculate mouse position relative to viewport
+        const mouseX = event.clientX;
+        const mouseY = event.clientY;
+        
+        // Get tooltip dimensions
+        const tooltipNode = this.tooltip.node();
+        const tooltipRect = tooltipNode.getBoundingClientRect();
+        
+        // Calculate tooltip position
+        let tooltipX = mouseX;
+        let tooltipY = mouseY;
+        
+        // Adjust position if tooltip would go beyond viewport edges
+        // Left edge
+        if (tooltipX - (tooltipRect.width / 2) < 0) {
+            tooltipX = tooltipRect.width / 2;
+        }
+        // Right edge
+        if (tooltipX + (tooltipRect.width / 2) > window.innerWidth) {
+            tooltipX = window.innerWidth - (tooltipRect.width / 2);
+        }
+        // Top edge
+        if (tooltipY - tooltipRect.height - 20 < 0) {
+            // If there's not enough space above, show below cursor
+            tooltipY = mouseY + 20;
+            this.tooltip.style("transform", "translate(-50%, 0)");
+        } else {
+            // Show above cursor
+            this.tooltip.style("transform", "translate(-50%, -100%)");
+        }
+        
+        this.tooltip
+            .style("left", `${tooltipX}px`)
+            .style("top", `${tooltipY}px`);
+    }
+
+    addResetButton() {
+        d3.select(`#${this.containerId}`)
+            .append("div")
+            .attr("class", "reset-button")
+            .style("position", "absolute")
+            .style("top", "20px")
+            .style("right", "20px")
+            .style("background", "rgba(255, 255, 255, 0.9)")
+            .style("padding", "8px 16px")
+            .style("border-radius", "4px")
+            .style("box-shadow", "0 2px 4px rgba(0,0,0,0.1)")
+            .style("cursor", "pointer")
+            .text("Reset View")
+            .on("click", () => {
+                this.resetVisualization();
+            })
+            .on("mouseover", function() {
+                d3.select(this).style("background", "rgba(255, 255, 255, 1)");
+            })
+            .on("mouseout", function() {
+                d3.select(this).style("background", "rgba(255, 255, 255, 0.9)");
+            });
+    }
+
+    resetVisualization() {
+        // Reset node and link opacities
+        this.node.style("opacity", 1);
+        this.link.style("opacity", 0.6);
+        
+        // Reset zoom
+        this.svg.transition()
+            .duration(750)
+            .call(this.zoom.transform, d3.zoomIdentity);
+            
+        // Restart the simulation
+        this.simulation.alpha(0.3).restart();
     }
 
     dragstarted(event) {

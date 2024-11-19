@@ -1,0 +1,14 @@
+.experience-page {
+  .resume-section {
+    @include grid-responsive;
+    margin-bottom: map-get($spacing, 'section');
+  }
+
+  .education-details {
+    margin: map-get($spacing, 'section') 0;
+  }
+
+  .course-category {
+    margin-bottom: map-get($spacing, 'unit');
+  }
+}

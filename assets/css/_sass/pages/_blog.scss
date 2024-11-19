@@ -1,0 +1,14 @@
+.blog-page {
+  .blog-grid {
+    @include grid-responsive;
+  }
+
+  .blog-content {
+    @extend .card;
+    
+    .blog-meta {
+      color: map-get($colors, 'medium-gray');
+      margin-bottom: map-get($spacing, 'unit');
+    }
+  }
+}

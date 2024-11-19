@@ -1,0 +1,36 @@
+// Individual color variables for direct access
+$white: #fff;
+$primary: #2b4c7e;
+$secondary: #567eae;
+$text: #333;
+$light-gray: #f5f5f5;
+$medium-gray: #666;
+$grey: #828282;
+
+// Maps for systematic usage
+$colors: (
+  'primary': $primary,
+  'secondary': $secondary,
+  'text': $text,
+  'light-gray': $light-gray,
+  'medium-gray': $medium-gray,
+  'white': $white,
+  'grey': $grey
+);
+
+$spacing: (
+  'unit': 1rem,
+  'section': 4rem,
+  'card': 2rem
+);
+
+$layout: (
+  'max-width': 1200px,
+  'border-radius': 8px,
+  'mobile-breakpoint': 768px
+);
+
+$shadows: (
+  'card': 0 2px 8px rgba(0, 0, 0, 0.1),
+  'header': 0 2px 8px rgba(0, 0, 0, 0.2)
+);

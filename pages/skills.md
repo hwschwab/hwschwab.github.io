@@ -1,14 +1,13 @@
 ---
-layout: page
+layout: skills
 title: Skills
 permalink: /skills/
+className: skills-page
 ---
 
 ## Skills Network
 
-
 <div id="skills-container" class="skills-visualization-container"></div>
-
 
 ## Technical Competencies
 

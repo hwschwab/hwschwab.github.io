@@ -1,0 +1,19 @@
+.skills-page {
+  max-width: map-get($layout, 'max-width');
+  margin: 0 auto;
+  padding: map-get($spacing, 'unit');
+
+  .skills-visualization-container {
+    @extend .card;
+    height: 800px;
+    margin: map-get($spacing, 'unit') 0;
+    overflow: hidden;
+  }
+
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: map-get($spacing, 'unit') 0;
+  }
+}

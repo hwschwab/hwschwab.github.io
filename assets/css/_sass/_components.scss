@@ -1,0 +1,292 @@
+// First define the base card class
+.card {
+  background: map-get($colors, 'white');
+  padding: map-get($spacing, 'card');
+  border-radius: map-get($layout, 'border-radius');
+  box-shadow: map-get($shadows, 'card');
+}
+
+// Activity Cards
+.activity-pair {
+  @include grid-responsive;
+  margin-bottom: map-get($spacing, 'section');
+  @extend .card;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: map-get($spacing, 'card');
+    border-bottom: 2px solid map-get($colors, 'light-gray');
+  }
+}
+
+.activity-card {
+  padding: map-get($spacing, 'card');
+  height: 100%;
+
+  h3 {
+    color: map-get($colors, 'primary');
+    margin-bottom: map-get($spacing, 'unit');
+  }
+}
+
+// Resume Section
+.resume-section {
+  @include grid-responsive;
+}
+
+.resume-card {
+  @extend .card;
+  text-align: center;
+}
+
+.resume-download {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: map-get($colors, 'primary');
+  color: map-get($colors, 'white');
+  border-radius: map-get($layout, 'border-radius');
+  margin-top: map-get($spacing, 'unit');
+  @include transition;
+  
+  &:hover {
+    background: lighten(map-get($colors, 'primary'), 10%);
+  }
+}
+
+// Publication Cards
+.publication-card {
+  @extend .card;
+  margin-bottom: map-get($spacing, 'card');
+}
+
+.publication-meta {
+  color: map-get($colors, 'medium-gray');
+  margin-bottom: map-get($spacing, 'unit');
+
+  span {
+    margin-right: map-get($spacing, 'card');
+  }
+}
+
+// Blog Grid
+.blog-grid {
+  @include grid-responsive;
+}
+
+.blog-card {
+  @extend .card;
+  overflow: hidden;
+}
+
+// Header & Footer shared styles
+%site-wrapper {
+  max-width: map-get($layout, 'max-width');
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 map-get($spacing, 'unit');
+
+  @include mobile {
+    flex-direction: column;
+    text-align: center;
+    gap: map-get($spacing, 'unit');
+  }
+}
+
+.site-header {
+  background: map-get($colors, 'primary');
+  width: 100%;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: map-get($shadows, 'header');
+
+  .header-wrapper {
+    @extend %site-wrapper;
+    align-items: center;
+  }
+
+  .site-title {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    @include mobile {
+      flex-direction: column;
+      width: 100%;
+      display: none;
+
+      &.active {
+        display: flex;
+      }
+    }
+  }
+
+  .nav-link {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s;
+
+    &:hover {
+      color: rgba(255, 255, 255, 0.8);
+    }
+  }
+
+  .nav-toggle {
+    display: none;
+
+    @include mobile {
+      &:checked ~ .nav-list {
+        display: flex;
+      }
+    }
+  }
+
+  .nav-toggle-label {
+    display: none;
+    cursor: pointer;
+
+    @include mobile {
+      display: block;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      width: 30px;
+      height: 24px;
+
+      span {
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background: #fff;
+        transition: transform 0.3s;
+
+        &:nth-child(1) {
+          top: 0;
+        }
+
+        &:nth-child(2) {
+          top: 50%;
+          transform: translateY(-50%);
+        }
+
+        &:nth-child(3) {
+          bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.site-footer {
+  background: map-get($colors, 'primary');
+  color: map-get($colors, 'white');
+  width: 100vw;
+  padding: 2rem 0;
+  margin-top: auto;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+
+  .footer-wrapper {
+    @extend %site-wrapper;
+    flex-direction: column;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .site-description {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0;
+    opacity: 0.9;
+  }
+
+  .social-links {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+    justify-content: center;
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      transition: all 0.2s ease-in-out;
+      color: map-get($colors, 'white');
+
+      svg {
+        width: 1.2rem;
+        height: 1.2rem;
+        fill: currentColor;
+      }
+
+      &:hover {
+        transform: translateY(-2px);
+        background: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      &:active {
+        transform: translateY(-1px);
+      }
+    }
+  }
+}
+
+// Individual icon hover effects
+.social-links {
+  a[aria-label="GitHub"]:hover {
+    color: #f0f6fc;
+  }
+
+  a[aria-label="LinkedIn"]:hover {
+    color: #0a66c2;
+  }
+
+  a[aria-label="Email"]:hover {
+    color: #ea4335;
+  }
+}
+// Skills
+.skills-visualization-container {
+  @extend .card;
+  position: relative;
+  width: 100%;
+  height: 800px;
+  margin: map-get($spacing, 'unit') 0;
+  overflow: hidden;
+}
+
+.skills-tooltip {
+  position: fixed;
+  visibility: hidden;
+  pointer-events: none;
+  transition: transform 0.1s ease-out;
+}
