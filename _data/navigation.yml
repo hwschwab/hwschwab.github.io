@@ -1,12 +1,12 @@
 main:
   - title: "About"
     url: /
+  - title: "Skills"
+    url: /skills/
   - title: "Research"
     url: /research/
   - title: "Experience"
     url: /experience/
-  - title: "Skills"
-    url: /skills/
   - title: "Linkedin"
     url: https://www.linkedin.com/in/harper-schwab/
   - title: "Contact"
