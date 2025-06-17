@@ -1,77 +1,102 @@
 intro: >
-  Here is all of my most important current activities, both professional and personally.
-  As I complete my undergraduate degree, I've developed deep connections within both of 
-  my major departments. My thesis research uniquely combines these disciplines to address 
-  pressing challenges in an emerging field. This focused approach has allowed me to build 
-  meaningful expertise rather than spreading myself too thin across multiple areas.
+  I am currently working as a Data Science and Human Rights Research Specialist at the World Bank, 
+  where I combine my academic background in data science and human rights to address global challenges. 
+  My work focuses on using advanced AI/ML methodologies to promote inclusive growth and combat discrimination, 
+  contributing to the World Bank's mission of fostering opportunities for the 2.3+ billion people globally 
+  facing social exclusion.
 
 items:
-  - title: "My Thesis"
+  - title: "Human Rights Economy Research"
     description: >
-      My thesis examines the right to be forgotten in the context of
-      large language models (LLMs) by analyzing Meta's privacy policies 
-      in the EU, where this right is protected, and the United States, where
-      federal protection is absent.
-    subtitle: "Why is this Important?"
+      Leading research to define and scope the emerging field of the human rights economy through 
+      interdisciplinary legal and economic analysis. This foundational work aims to establish frameworks 
+      for understanding how human rights principles can be integrated into economic systems and policy-making 
+      at a global scale.
+    subtitle: "Innovative Research at the Intersection of Rights and Economics"
     details: >
-      The right to be forgotten empowers individuals to control the collection
-      and storage of their personal data. As LLMs become ubiquitous in daily life, 
-      they raise new privacy concerns since they're trained on data collected without 
-      explicit consent. While traditional data removal requests follow established
-      procedures, LLMs present a unique challenge: how can personal data be protected 
-      once it's incorporated into their training? Meta's operations in both the EU and 
-      US serve as a case study for navigating these emerging tensions between privacy rights and AI development.
+      This project represents work in a developing field that bridges traditional human rights 
+      advocacy with economic development strategies. As this research is in its scoping phases, it will lay 
+      groundwork for future World Bank initiatives that embed human rights considerations into economic 
+      development projects. The findings will contribute to policy frameworks that ensure economic growth 
+      serves human dignity and rights protection.
 
+  - title: "AI-Driven Analysis of Female Government Participation"
+    description: >
+      Applying machine learning and artificial intelligence methodologies to analyze patterns of female 
+      participation in government, with particular focus on identifying and addressing discrimination 
+      barriers. This research utilizes comprehensive regional datasets to predict participation patterns 
+      in the absence of gender-based discrimination.
+    subtitle: "Combating Gender Discrimination Through Data Science"
+    details: >
+      This project leverages multiple regional barometers including the Latinobarómetro and Arab Barometer, 
+      which contain rich data on discrimination experiences and attitudes. By applying advanced AI/ML techniques 
+      to this data, we can identify systemic patterns of exclusion and develop evidence-based interventions 
+      to promote women's political participation. The work directly contributes to the World Bank's goals 
+      of fostering inclusive governance structures worldwide.
+
+  - title: "Thesis Research: Privacy Rights in the AI Era"
+    description: >
+      Completed comprehensive research examining the right to be forgotten in the context of Large Language 
+      Models, analyzing how artificial intelligence systems challenge traditional privacy frameworks. My thesis 
+      investigated Meta's implementation of privacy policies across EU and US jurisdictions, revealing fundamental 
+      tensions between technological capabilities and legal protections.
+    subtitle: "Bridging Technology and Human Rights"
+    details: >
+      This research demonstrates how current privacy laws—designed for earlier technological paradigms—struggle 
+      to address the realities of AI systems where data becomes embedded in neural networks. The work proposes 
+      a "progressive realization" approach to privacy rights that acknowledges technological constraints while 
+      maintaining meaningful protection for individuals. The findings contribute to ongoing policy debates about 
+      AI governance and digital rights.
   - title: "Global Human Rights Lab"
     description: >
-      The Pozen Center's Global Human Rights Lab accepts qualified undergraduate students to 
+      The Pozen Center's Global Human Rights Lab accepted qualified undergraduate students to 
       conduct research with the University of Chicago Law School's Global Human Rights Clinic. 
-      Our research teams work collaboratively to gather and analyze critical data on human rights 
-      violations, producing reports and documentation that directly support the work of the United 
-      Nations and other international partners. The Lab provides hands-on experience in human rights 
+      Our research teams worked collaboratively to gather and analyze critical data on human rights 
+      violations, producing reports and documentation that directly supported the work of the United 
+      Nations and other international partners. The Lab provided hands-on experience in human rights 
       research while contributing to real-world initiatives for justice and accountability.
     subtitle: "Impact & Opportunities" 
     details: >
-      This research position offers a unique opportunity to develop advanced qualitative research 
-      skills while contributing to vital work in the human rights space. I'm particularly excited 
+      This research position offered a unique opportunity to develop advanced qualitative research 
+      skills while contributing to vital work in the human rights space. I was particularly excited 
       to assist with high-impact projects, such as supporting the UN Special Rapporteur on Extrajudicial,
        Summary, or Arbitrary Executions and documenting civilian casualties in ongoing armed conflicts.
         The gravity and importance of this work - helping to shed light on human rights violations and 
-        support accountability efforts - makes me deeply honored to be part of these initiatives. Working 
-        directly with the United Nations brings my academic journey full circle, building meaningfully on 
-        my foundational experience with Model UN and crystallizing many of the core interests I've pursued
-        throughout my undergraduate studies. This role represents not just a professional opportunity, but
-         a chance to contribute to work that aligns deeply with my values and aspirations in human rights advocacy.
+        support accountability efforts - made me deeply honored to be part of these initiatives. Working 
+        directly with the United Nations brought my academic journey full circle, building meaningfully on 
+        my foundational experience with Model UN and crystallizing many of the core interests I had pursued
+        throughout my undergraduate studies. This role represented not just a professional opportunity, but
+         a chance to contribute to work that aligned deeply with my values and aspirations in human rights advocacy.
   - title: "Model United Nations (MUN)"
     description: >
-      As President of UChicago's Model UN competitive team, I lead one of the nation's premier collegiate MUN programs,
-       consistently ranked in the top five nationally. This leadership role involves directing comprehensive training 
+      As President of UChicago's Model UN competitive team, I led one of the nation's premier collegiate MUN programs,
+       consistently ranked in the top five nationally. This leadership role involved directing comprehensive training 
        programs for sixty team members, focusing on public speaking, international relations analysis, project management,
-        and inclusive leadership practices. Our program combines rigorous academic preparation with practical diplomatic 
+        and inclusive leadership practices. Our program combined rigorous academic preparation with practical diplomatic 
         skills development, maintaining UChicago's legacy of excellence in collegiate Model UN competition.
     subtitle: "Leadership & Achievements"
     details: >
         Under my leadership, our team secured Best Large Delegation at Georgetown's National Collegiate Security 
         Conference (NCSC), the most prestigious fall competition in collegiate Model UN. Beyond competitive achievements, 
-        this role has profoundly shaped my leadership philosophy and capabilities. I've developed expertise in strategic
-         team management, personalized mentorship, and creating an inclusive team culture that balances competitive
-          excellence with individual growth. Managing a large, diverse team through high-stakes competitions has honed 
-          my skills in crisis management, adaptive leadership, and organizational development. This experience has become 
+        this role profoundly shaped my leadership philosophy and capabilities. I developed expertise in strategic
+         team management, personalized mentorship, and creating an inclusive team culture that balanced competitive
+          excellence with individual growth. Managing a large, diverse team through high-stakes competitions honed 
+          my skills in crisis management, adaptive leadership, and organizational development. This experience became 
           the cornerstone of my undergraduate leadership journey, providing invaluable lessons in building and maintaining
            high-performing teams while fostering a supportive community atmosphere.
   - title: "Data Science Clinic"
     description: >
-      In the Data Science Clinic, I'm contributing to a collaborative project with Inclusive Development International to
-       enhance PalmWatch, a supply chain transparency tool for the palm oil industry. Our team is developing a comprehensive
+      In the Data Science Clinic, I contributed to a collaborative project with Inclusive Development International to
+       enhance PalmWatch, a supply chain transparency tool for the palm oil industry. Our team developed a comprehensive
         mapping system for human rights grievances, integrating this data with PalmWatch's existing supply chain tracking
-         capabilities. This integration will enable users to monitor both corporate supply chains and associated human rights
+         capabilities. This integration enabled users to monitor both corporate supply chains and associated human rights
           practices, creating a more robust accountability framework for the palm oil sector.
     subtitle: "Project Impact & Integration"
     details: >
-      This project represents a perfect synthesis of my academic pursuits in data science and human rights. By applying
-       data science methodologies to human rights documentation, we're creating actionable insights for corporate 
-       accountability. Our work involves cleaning and structuring complex datasets of human rights violations, developing
+      This project represented a perfect synthesis of my academic pursuits in data science and human rights. By applying
+       data science methodologies to human rights documentation, we created actionable insights for corporate 
+       accountability. Our work involved cleaning and structuring complex datasets of human rights violations, developing
         systematic mapping protocols, and ensuring seamless integration with the existing PalmWatch platform. This practical
-         application of technical skills to advance human rights demonstrates the powerful intersection of technology and 
-         social justice. The project exemplifies how data-driven approaches can enhance transparency in global supply chains 
+         application of technical skills to advance human rights demonstrated the powerful intersection of technology and 
+         social justice. The project exemplified how data-driven approaches could enhance transparency in global supply chains 
          and strengthen mechanisms for protecting human rights in international business operations.

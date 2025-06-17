@@ -1,8 +1,9 @@
 # Site settings
 title: Harper Schwab
-email: hwschwab@uchicago.edu
+email: harper.w.schwab@gmail.com
 description: 
-  Data Science & Human Rights student at the University of Chicago, 
+  Data Science & Human Rights Research Specialist at the World Bank.
+  University of Chicago graduate (B.S. Data Science, B.A. Human Rights with Honors)
   focusing on privacy, ethics, and the intersection of technology and human rights.
 baseurl: "" # leave empty if your site is at username.github.io
 url: "https://hwschwab.github.io"
@@ -14,7 +15,6 @@ show_downloads: false
 # Build settings
 markdown: kramdown
 theme: jekyll-theme-minimal
-
 
 plugins:
   - jekyll-feed

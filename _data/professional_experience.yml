@@ -1,20 +1,35 @@
-- organization: Global Human Rights Lab
-  role: Research Assistant
-  date: June 2023 - Present
+- organization: Data Science Institute, University of Chicago
+  role: Teaching Assistant
+  date: September 2024 - June 2025
   description:
-    - Conducting research on human rights violations and policy implications
-    - Analyzing data patterns to identify systemic issues and potential solutions
-    - Collaborating with international partners to document and investigate cases
+    - Led technical project management for two NGO/non-profit client teams, directing deliverables and mentoring students in ML/AI/LLM integration
+    - Implemented reproducible development environments using Docker and Make to ensure consistent testing and deployment across diverse teams
+    - Received Excellence in Data Science Award for outstanding work in the Data Science Clinic
+
+- organization: Pozen Center For Human Rights, University of Chicago
+  role: Research Assistant
+  date: October 2024 - June 2025
+  description:
+    - Collaborated with the Global Human Rights Clinic at UChicago Law to compile country reports on family rights and police killings for the Special Rapporteur on Extrajudicial Killings' report to UN General Assembly
+    - Analyzed laws and institutions to assess state protections for families after extrajudicial killings in Ukraine, India, England, and Kenya
 
 - organization: Results for America
-  role: Data Analysis Intern
-  date: September 2023 - Present
+  role: Data Science and Research Intern
+  date: June 2024 - August 2024
   description:
-    - Analyzing government funding patterns to identify equity gaps
-    - Creating data visualizations to communicate findings to stakeholders
-    - Developing recommendations for more equitable resource allocation
+    - Developed a Python data pipeline leveraging data from comprehensive sources including USAspending.gov and US Census Bureau
+    - Facilitated reuse by senior management to demonstrate impact of data-driven policy
+    - Created 200+ visualizations to identify the rural-urban divide in US government funding
 
-- organization: Data Cognition Lab
+- organization: Global Human Rights Lab, University of Chicago
+  role: Research Assistant
+  date: June 2023 - June 2025
+  description:
+    - Conducted research on human rights violations and policy implications
+    - Analyzed data patterns to identify systemic issues and potential solutions
+    - Collaborated with international partners to document and investigate cases
+
+- organization: Data Cognition Lab, University of Chicago
   role: Research Assistant
   date: January 2023 - June 2023
   description:
