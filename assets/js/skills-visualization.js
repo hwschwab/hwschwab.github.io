@@ -15,109 +15,152 @@ export default class SkillsVisualization {
         
         this.data = {
             nodes: [
-                // Position nodes
-                { id: "Thesis Research", category: "Position", level: 3, description: "Investigating right to be forgotten and LLMs through Meta's privacy policies in EU vs US" },
-                { id: "MUN President", category: "Position", level: 3, description: "President of UChicago Model UN, managing 60+ team members and $78k+ budget" },
-                { id: "Data Science TA", category: "Position", level: 2, description: "Teaching Assistant for Ethics in Data Science course" },
-                { id: "Data Cognition Lab", category: "Position", level: 3, description: "Research position focusing on participatory budgeting visualization" },
-                { id: "Results for America", category: "Position", level: 3, description: "Data analysis role focused on government funding equity" },
-                { id: "Global Human Rights Lab", category: "Position", level: 3, description: "Research position investigating human rights violations" },
-                { id: "Folkmoot Guide", category: "Position", level: 2, description: "Assistant Guide for International Cultural Festival" },
+                // Current Position nodes
+                { id: "World Bank Research", category: "Position", level: 4, description: "Data Science and Human Rights Research Specialist at the World Bank's Data and Analytics Global Solutions Group" },
+                
+                // Completed Position nodes
+                { id: "Thesis Research", category: "Position", level: 3, description: "Completed thesis on right to be forgotten and LLMs through Meta's privacy policies in EU vs US" },
+                { id: "MUN President", category: "Position", level: 3, description: "Former President of UChicago Model UN, managed 60+ team members and $82k+ budget (2022-2025)" },
+                { id: "Data Science TA", category: "Position", level: 3, description: "Former Teaching Assistant for Data Science Clinic, received Excellence in Data Science Award" },
+                { id: "Data Cognition Lab", category: "Position", level: 3, description: "Former research position focusing on participatory budgeting visualization" },
+                { id: "Results for America", category: "Position", level: 3, description: "Former data analysis internship focused on government funding equity" },
+                { id: "Global Human Rights Lab", category: "Position", level: 3, description: "Former research position investigating human rights violations for UN reports" },
+                { id: "Data and Democracy", category: "Position", level: 3, description: "Completed project: Led team of 4 to create historical voting records dataset using LLMs" },
+                { id: "IDI PalmWatch", category: "Position", level: 3, description: "Completed project: Enhanced supply chain transparency tool with human rights grievance mapping" },
 
-                // Technical nodes
-                { id: "Python", category: "Technical", level: 3, description: "Advanced Python development with 4+ years experience in data analysis and automation" },
-                { id: "Data Visualization", category: "Technical", level: 3, description: "Creating interactive and static visualizations using D3.js and other tools" },
-                { id: "Statistical Analysis", category: "Technical", level: 3, description: "Advanced statistical methods and analysis for research and data interpretation" },
-                { id: "Machine Learning", category: "Technical", level: 2, description: "Experience with ML algorithms and frameworks" },
-                { id: "Web Development", category: "Technical", level: 2, description: "Full-stack development experience with focus on data-driven applications" },
+                // Technical nodes - enhanced with new skills
+                { id: "Python", category: "Technical", level: 4, description: "Advanced Python development with 5+ years experience in data analysis, ML, and automation" },
+                { id: "Data Visualization", category: "Technical", level: 4, description: "Expert in creating interactive and static visualizations using D3.js, matplotlib, and other tools" },
+                { id: "Statistical Analysis", category: "Technical", level: 4, description: "Advanced statistical methods for research, policy analysis, and discrimination detection" },
+                { id: "Machine Learning", category: "Technical", level: 4, description: "Advanced ML/AI experience including LLM integration and predictive modeling" },
+                { id: "Web Development", category: "Technical", level: 3, description: "Full-stack development with focus on data-driven applications and web scraping" },
+                { id: "Data Pipeline Development", category: "Technical", level: 4, description: "Expert in building automated data pipelines and ETL processes" },
+                { id: "LLM Integration", category: "Technical", level: 3, description: "Experience integrating Large Language Models for data processing and analysis" },
+                { id: "Docker & DevOps", category: "Technical", level: 3, description: "Proficient in containerization and reproducible development environments" },
 
-                // Research nodes
-                { id: "Human Rights Research", category: "Research", level: 3, description: "Investigating and documenting human rights cases, policy analysis, and impact assessment" },
-                { id: "Privacy Policy Analysis", category: "Research", level: 3, description: "Analyzing privacy policies and their implications across different jurisdictions" },
-                { id: "Data Ethics", category: "Research", level: 2, description: "Understanding and applying ethical frameworks in data science" },
-                { id: "Academic Writing", category: "Research", level: 2, description: "Publishing research papers and creating comprehensive reports" },
+                // Research nodes - updated with thesis completion
+                { id: "Human Rights Research", category: "Research", level: 4, description: "Expert in investigating human rights violations, policy analysis, and UN reporting" },
+                { id: "Privacy Policy Analysis", category: "Research", level: 4, description: "Completed comprehensive analysis of privacy policies and AI governance frameworks" },
+                { id: "Data Ethics", category: "Research", level: 4, description: "Advanced understanding of ethical frameworks in data science and AI systems" },
+                { id: "Academic Writing", category: "Research", level: 4, description: "Proven track record publishing research papers and comprehensive reports" },
+                { id: "Economic Research", category: "Research", level: 3, description: "Current research defining the human rights economy through interdisciplinary analysis" },
+                { id: "Discrimination Analysis", category: "Research", level: 3, description: "Using AI/ML to analyze patterns of gender discrimination in government participation" },
 
-                // Leadership nodes
-                { id: "Team Management", category: "Leadership", level: 3, description: "Leading and coordinating teams of 60+ members in Model UN" },
-                { id: "Budget Management", category: "Leadership", level: 3, description: "Managing and allocating $78,000+ annual budget" },
-                { id: "Training Development", category: "Leadership", level: 2, description: "Creating and implementing training programs for team members" },
+                // Leadership nodes - enhanced with World Bank experience
+                { id: "Team Management", category: "Leadership", level: 4, description: "Expert in leading diverse teams, from 60+ member MUN teams to technical project groups" },
+                { id: "Budget Management", category: "Leadership", level: 3, description: "Experience managing $82,000+ annual budgets and resource allocation" },
+                { id: "Training Development", category: "Leadership", level: 3, description: "Creating and implementing training programs for team members and students" },
+                { id: "Technical Leadership", category: "Leadership", level: 4, description: "Leading technical projects and mentoring in ML/AI integration at World Bank and university" },
+                { id: "Strategic Planning", category: "Leadership", level: 3, description: "Developing strategic approaches for research projects and organizational initiatives" },
 
-                // Communication nodes
-                { id: "Public Speaking", category: "Communication", level: 3, description: "Presenting at conferences and leading team training sessions" },
-                { id: "Cross-cultural Communication", category: "Communication", level: 3, description: "Experience with international teams and cultural festivals" },
-                { id: "Technical Writing", category: "Communication", level: 2, description: "Creating documentation and technical reports" },
+                // Communication nodes - enhanced
+                { id: "Public Speaking", category: "Communication", level: 4, description: "Expert presenter at conferences, thesis defense, and team training sessions" },
+                { id: "Cross-cultural Communication", category: "Communication", level: 4, description: "International experience with World Bank, UN reporting, and global research partnerships" },
+                { id: "Technical Writing", category: "Communication", level: 4, description: "Expert in creating technical documentation, thesis writing, and research reports" },
+                { id: "Stakeholder Communication", category: "Communication", level: 4, description: "Experience communicating complex findings to both technical and non-technical audiences" },
 
-                // Domain Knowledge nodes
-                { id: "International Relations", category: "Domain", level: 2, description: "Understanding of global politics and international systems" },
-                { id: "Human Rights Law", category: "Domain", level: 2, description: "Knowledge of human rights frameworks and legal systems" },
-                { id: "Privacy Rights", category: "Domain", level: 3, description: "Expertise in privacy rights and data protection regulations" }
+                // Domain Knowledge nodes - expanded
+                { id: "International Development", category: "Domain", level: 4, description: "Current expertise in global development challenges and World Bank methodologies" },
+                { id: "Human Rights Law", category: "Domain", level: 4, description: "Advanced knowledge of human rights frameworks, GDPR, and international legal systems" },
+                { id: "Privacy Rights", category: "Domain", level: 4, description: "Expert knowledge in privacy rights, AI governance, and data protection regulations" },
+                { id: "AI Governance", category: "Domain", level: 4, description: "Specialized expertise in AI policy, algorithmic transparency, and progressive privacy frameworks" },
+                { id: "Gender Equality", category: "Domain", level: 3, description: "Current research focus on gender discrimination and female political participation" },
+                { id: "International Relations", category: "Domain", level: 3, description: "Understanding of global politics and international systems through MUN and UN work" }
             ],
             links: [
-                // Technical Foundations
-                { source: "Python", target: "Data Visualization", strength: 3 },
-                { source: "Python", target: "Statistical Analysis", strength: 3 },
-                { source: "Python", target: "Machine Learning", strength: 2 },
-                { source: "Web Development", target: "Data Visualization", strength: 2 },
-                { source: "Machine Learning", target: "Data Ethics", strength: 2 },
-                { source: "Machine Learning", target: "Data Visualization", strength: 2 },
+                // World Bank central connections
+                { source: "World Bank Research", target: "Human Rights Research", strength: 4 },
+                { source: "World Bank Research", target: "Machine Learning", strength: 4 },
+                { source: "World Bank Research", target: "Statistical Analysis", strength: 4 },
+                { source: "World Bank Research", target: "Economic Research", strength: 4 },
+                { source: "World Bank Research", target: "Discrimination Analysis", strength: 4 },
+                { source: "World Bank Research", target: "International Development", strength: 4 },
+                { source: "World Bank Research", target: "Gender Equality", strength: 4 },
+                { source: "World Bank Research", target: "Technical Leadership", strength: 3 },
 
-                // Research Connections
-                { source: "Privacy Policy Analysis", target: "Privacy Rights", strength: 3 },
-                { source: "Human Rights Research", target: "Human Rights Law", strength: 3 },
-                { source: "Data Ethics", target: "Privacy Rights", strength: 3 },
-                { source: "Academic Writing", target: "Human Rights Research", strength: 2 },
+                // Technical Foundations - enhanced
+                { source: "Python", target: "Data Visualization", strength: 4 },
+                { source: "Python", target: "Statistical Analysis", strength: 4 },
+                { source: "Python", target: "Machine Learning", strength: 4 },
+                { source: "Python", target: "Data Pipeline Development", strength: 4 },
+                { source: "Web Development", target: "Data Visualization", strength: 3 },
+                { source: "Machine Learning", target: "LLM Integration", strength: 4 },
+                { source: "Data Pipeline Development", target: "Docker & DevOps", strength: 3 },
+                { source: "LLM Integration", target: "Data Pipeline Development", strength: 3 },
 
-                // Position to Technical
-                { source: "Data Science TA", target: "Python", strength: 3 },
-                { source: "Data Science TA", target: "Machine Learning", strength: 3 },
+                // Research Connections - updated
+                { source: "Privacy Policy Analysis", target: "Privacy Rights", strength: 4 },
+                { source: "Privacy Policy Analysis", target: "AI Governance", strength: 4 },
+                { source: "Human Rights Research", target: "Human Rights Law", strength: 4 },
+                { source: "Data Ethics", target: "Privacy Rights", strength: 4 },
+                { source: "Data Ethics", target: "AI Governance", strength: 4 },
+                { source: "Academic Writing", target: "Human Rights Research", strength: 4 },
+                { source: "Economic Research", target: "International Development", strength: 3 },
+                { source: "Discrimination Analysis", target: "Gender Equality", strength: 4 },
+                { source: "Discrimination Analysis", target: "Machine Learning", strength: 4 },
+
+                // Completed projects to skills
+                { source: "Data and Democracy", target: "LLM Integration", strength: 4 },
+                { source: "Data and Democracy", target: "Team Management", strength: 3 },
+                { source: "Data and Democracy", target: "Data Pipeline Development", strength: 3 },
+                { source: "IDI PalmWatch", target: "Web Development", strength: 4 },
+                { source: "IDI PalmWatch", target: "Human Rights Research", strength: 4 },
+                { source: "IDI PalmWatch", target: "Technical Leadership", strength: 4 },
+                { source: "IDI PalmWatch", target: "LLM Integration", strength: 3 },
+
+                // Position to Technical - updated
+                { source: "Data Science TA", target: "Python", strength: 4 },
+                { source: "Data Science TA", target: "Machine Learning", strength: 4 },
+                { source: "Data Science TA", target: "Docker & DevOps", strength: 3 },
+                { source: "Data Science TA", target: "Technical Leadership", strength: 4 },
                 { source: "Data Cognition Lab", target: "Python", strength: 3 },
-                { source: "Data Cognition Lab", target: "Data Visualization", strength: 3 },
-                { source: "Data Cognition Lab", target: "Academic Writing", strength: 2 },
-                { source: "Data Cognition Lab", target: "Technical Writing", strength: 2 },
-                { source: "Results for America", target: "Statistical Analysis", strength: 3 },
-                { source: "Results for America", target: "Python", strength: 3 },
-                { source: "Thesis Research", target: "Privacy Policy Analysis", strength: 3 },
+                { source: "Data Cognition Lab", target: "Data Visualization", strength: 4 },
+                { source: "Results for America", target: "Statistical Analysis", strength: 4 },
+                { source: "Results for America", target: "Data Pipeline Development", strength: 4 },
+                { source: "Thesis Research", target: "Privacy Policy Analysis", strength: 4 },
+                { source: "Thesis Research", target: "Academic Writing", strength: 4 },
 
-                // Leadership and Management
-                { source: "MUN President", target: "Team Management", strength: 3 },
-                { source: "MUN President", target: "Budget Management", strength: 3 },
-                { source: "MUN President", target: "Training Development", strength: 3 },
-                { source: "Folkmoot Guide", target: "Budget Management", strength: 3 },
+                // Leadership and Management - enhanced
+                { source: "MUN President", target: "Team Management", strength: 4 },
+                { source: "MUN President", target: "Budget Management", strength: 4 },
+                { source: "MUN President", target: "Training Development", strength: 4 },
+                { source: "MUN President", target: "Strategic Planning", strength: 3 },
 
-                // Communication Links
-                { source: "Public Speaking", target: "Training Development", strength: 2 },
-                { source: "Technical Writing", target: "Privacy Policy Analysis", strength: 2 },
-                { source: "Cross-cultural Communication", target: "International Relations", strength: 3 },
+                // Communication Links - enhanced
+                { source: "Public Speaking", target: "Training Development", strength: 3 },
+                { source: "Technical Writing", target: "Privacy Policy Analysis", strength: 4 },
+                { source: "Technical Writing", target: "Academic Writing", strength: 4 },
+                { source: "Cross-cultural Communication", target: "International Development", strength: 4 },
+                { source: "Stakeholder Communication", target: "Technical Leadership", strength: 3 },
 
-                // Position to Domain
-                { source: "Global Human Rights Lab", target: "Human Rights Research", strength: 3 },
+                // Position to Domain - updated
+                { source: "Global Human Rights Lab", target: "Human Rights Research", strength: 4 },
                 { source: "Global Human Rights Lab", target: "Human Rights Law", strength: 3 },
-                { source: "Thesis Research", target: "Privacy Rights", strength: 3 },
-                { source: "Folkmoot Guide", target: "Cross-cultural Communication", strength: 3 },
-                { source: "Folkmoot Guide", target: "International Relations", strength: 2 },
-                { source: "Data Science TA", target: "Data Ethics", strength: 2 },
+                { source: "Global Human Rights Lab", target: "International Relations", strength: 3 },
+                { source: "Thesis Research", target: "Privacy Rights", strength: 4 },
+                { source: "Thesis Research", target: "AI Governance", strength: 4 },
+                { source: "Data Science TA", target: "Data Ethics", strength: 3 },
 
                 // Leadership & Domain Connections
-                { source: "MUN President", target: "International Relations", strength: 3 },
-                { source: "Team Management", target: "Cross-cultural Communication", strength: 2 },
-
-                // Research & Domain/Communication Links
-                { source: "Human Rights Research", target: "International Relations", strength: 2 },
-                { source: "Privacy Policy Analysis", target: "International Relations", strength: 2 },
-                { source: "Academic Writing", target: "Technical Writing", strength: 2 },
+                { source: "MUN President", target: "International Relations", strength: 4 },
+                { source: "Team Management", target: "Cross-cultural Communication", strength: 3 },
+                { source: "Technical Leadership", target: "AI Governance", strength: 3 },
 
                 // Position & Communication Links
-                { source: "MUN President", target: "Public Speaking", strength: 3 },
-                { source: "Data Science TA", target: "Public Speaking", strength: 2 },
-                { source: "Global Human Rights Lab", target: "Technical Writing", strength: 2 },
+                { source: "MUN President", target: "Public Speaking", strength: 4 },
+                { source: "Data Science TA", target: "Stakeholder Communication", strength: 3 },
+                { source: "World Bank Research", target: "Stakeholder Communication", strength: 4 },
+                { source: "Global Human Rights Lab", target: "Technical Writing", strength: 3 },
 
                 // Technical & Research Links
-                { source: "Data Visualization", target: "Academic Writing", strength: 2 },
-                { source: "Statistical Analysis", target: "Academic Writing", strength: 2 },
+                { source: "Data Visualization", target: "Academic Writing", strength: 3 },
+                { source: "Statistical Analysis", target: "Economic Research", strength: 3 },
+                { source: "Machine Learning", target: "Discrimination Analysis", strength: 4 },
 
                 // Leadership & Communication
-                { source: "Team Management", target: "Public Speaking", strength: 2 },
-                { source: "Training Development", target: "Cross-cultural Communication", strength: 2 }
+                { source: "Team Management", target: "Public Speaking", strength: 3 },
+                { source: "Training Development", target: "Cross-cultural Communication", strength: 3 },
+                { source: "Technical Leadership", target: "Stakeholder Communication", strength: 4 }
             ]
         };
 
@@ -171,7 +214,7 @@ export default class SkillsVisualization {
                 .distance(60))
             .force("charge", d3.forceManyBody().strength(-150))
             .force("center", d3.forceCenter(this.width / 2, this.height / 2))
-            .force("collision", d3.forceCollide().radius(30));
+            .force("collision", d3.forceCollide().radius(35));
 
         // Create legend, tooltip, links, nodes
         this.createLegend();
@@ -255,20 +298,36 @@ export default class SkillsVisualization {
                 .on("drag", (event) => this.dragged(event))
                 .on("end", (event) => this.dragended(event)));
 
-        // Add circles to nodes
+        // Add circles to nodes - special styling for World Bank
         this.node.append("circle")
-            .attr("r", d => d.category === "Position" ? 20 : 15)
+            .attr("r", d => {
+                if (d.id === "World Bank Research") return 25; // Larger for current position
+                if (d.category === "Position") return 20;
+                return 15;
+            })
             .style("fill", d => this.categoryColors[d.category])
-            .style("stroke", "white")
-            .style("stroke-width", 2);
+            .style("stroke", d => d.id === "World Bank Research" ? "#FFD700" : "white") // Gold border for current position
+            .style("stroke-width", d => d.id === "World Bank Research" ? 3 : 2);
 
         // Add labels to nodes
         this.node.append("text")
             .text(d => d.id)
-            .attr("dy", d => d.category === "Position" ? -25 : -20)
+            .attr("dy", d => {
+                if (d.id === "World Bank Research") return -30;
+                if (d.category === "Position") return -25;
+                return -20;
+            })
             .attr("text-anchor", "middle")
-            .style("font-size", d => d.category === "Position" ? "14px" : "12px")
-            .style("font-weight", d => d.category === "Position" ? "bold" : "normal")
+            .style("font-size", d => {
+                if (d.id === "World Bank Research") return "16px";
+                if (d.category === "Position") return "14px";
+                return "12px";
+            })
+            .style("font-weight", d => {
+                if (d.id === "World Bank Research") return "bold";
+                if (d.category === "Position") return "bold";
+                return "normal";
+            })
             .style("pointer-events", "none");
     }
 
@@ -288,12 +347,19 @@ export default class SkillsVisualization {
                 link.source.id === d.id || link.target.id === d.id ? 1 : 0.1
             );
             
+            const statusBadge = d.id === "World Bank Research" ? 
+                `<div style="background: #28a745; color: white; padding: 2px 8px; border-radius: 12px; font-size: 12px; margin-top: 8px;">CURRENT POSITION</div>` : 
+                d.category === "Position" && (d.description.includes("Former") || d.description.includes("Completed")) ?
+                `<div style="background: #6c757d; color: white; padding: 2px 8px; border-radius: 12px; font-size: 12px; margin-top: 8px;">COMPLETED</div>` :
+                '';
+
             const tooltipContent = `
                 <div style="border-bottom: 2px solid ${this.categoryColors[d.category]}; margin-bottom: 8px; padding-bottom: 8px;">
                     <strong style="font-size: 16px;">${d.id}</strong>
                     <div style="color: #666;">${d.category}</div>
                 </div>
                 <div>${d.description}</div>
+                ${statusBadge}
                 ${d.category === "Position" ? 
                     `<div style="margin-top: 8px; color: #666;">
                         Connected to ${connections.length} skills/experiences
@@ -317,7 +383,6 @@ export default class SkillsVisualization {
             this.link.style("opacity", 0.6);
             this.tooltip.style("visibility", "hidden");
         });
-
 
         this.simulation.on("tick", () => {
             this.link
