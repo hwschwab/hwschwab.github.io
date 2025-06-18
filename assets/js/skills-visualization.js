@@ -125,6 +125,7 @@ export default class SkillsVisualization {
                 { source: "MUN President", target: "Budget Management", strength: 4 },
                 { source: "MUN President", target: "Training Development", strength: 4 },
                 { source: "MUN President", target: "Strategic Planning", strength: 3 },
+                { source: "MUN President", target: "Technical Leadership", strength: 3 },
 
                 // Communication Links - enhanced
                 { source: "Public Speaking", target: "Training Development", strength: 3 },
@@ -143,11 +144,15 @@ export default class SkillsVisualization {
 
                 // Leadership & Domain Connections
                 { source: "MUN President", target: "International Relations", strength: 4 },
+                { source: "MUN President", target: "Human Rights Law", strength: 3 },
+                { source: "MUN President", target: "International Development", strength: 2 },
                 { source: "Team Management", target: "Cross-cultural Communication", strength: 3 },
                 { source: "Technical Leadership", target: "AI Governance", strength: 3 },
 
                 // Position & Communication Links
                 { source: "MUN President", target: "Public Speaking", strength: 4 },
+                { source: "MUN President", target: "Cross-cultural Communication", strength: 4 },
+                { source: "MUN President", target: "Stakeholder Communication", strength: 3 },
                 { source: "Data Science TA", target: "Stakeholder Communication", strength: 3 },
                 { source: "World Bank Research", target: "Stakeholder Communication", strength: 4 },
                 { source: "Global Human Rights Lab", target: "Technical Writing", strength: 3 },
@@ -156,6 +161,12 @@ export default class SkillsVisualization {
                 { source: "Data Visualization", target: "Academic Writing", strength: 3 },
                 { source: "Statistical Analysis", target: "Economic Research", strength: 3 },
                 { source: "Machine Learning", target: "Discrimination Analysis", strength: 4 },
+
+                // MUN President connections to research and other positions
+                { source: "MUN President", target: "Global Human Rights Lab", strength: 3 },
+                { source: "MUN President", target: "World Bank Research", strength: 2 },
+                { source: "MUN President", target: "Human Rights Research", strength: 3 },
+                { source: "MUN President", target: "Academic Writing", strength: 2 },
 
                 // Leadership & Communication
                 { source: "Team Management", target: "Public Speaking", strength: 3 },
