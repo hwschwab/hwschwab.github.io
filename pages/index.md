@@ -5,9 +5,13 @@ permalink: /
 className: home-page
 ---
 
-## About Me
-
-{{ site.data.about.content }}
+<div class="profile-section">
+  <img src="{{ site.baseurl }}/assets/images/Profile_picture.jpg" alt="Harper Schwab" class="profile-picture">
+  <div class="profile-content">
+    <h2>About Me</h2>
+    {{ site.data.about.content }}
+  </div>
+</div>
 
 ## Current Activities
 
