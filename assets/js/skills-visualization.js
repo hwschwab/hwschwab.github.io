@@ -77,6 +77,10 @@ export default class SkillsVisualization {
                 { source: "World Bank Research", target: "International Development", strength: 4 },
                 { source: "World Bank Research", target: "Gender Equality", strength: 4 },
                 { source: "World Bank Research", target: "Technical Leadership", strength: 3 },
+                { source: "World Bank Research", target: "International Relations", strength: 4 },
+                { source: "World Bank Research", target: "Strategic Planning", strength: 4 },
+                
+
 
                 // Technical Foundations - enhanced
                 { source: "Python", target: "Data Visualization", strength: 4 },
@@ -103,10 +107,13 @@ export default class SkillsVisualization {
                 { source: "Data and Democracy", target: "LLM Integration", strength: 4 },
                 { source: "Data and Democracy", target: "Team Management", strength: 3 },
                 { source: "Data and Democracy", target: "Data Pipeline Development", strength: 3 },
+                { source: "Data and Democracy", target: "Technical Leadership", strength: 4 },
                 { source: "IDI PalmWatch", target: "Web Development", strength: 4 },
                 { source: "IDI PalmWatch", target: "Human Rights Research", strength: 4 },
                 { source: "IDI PalmWatch", target: "Technical Leadership", strength: 4 },
                 { source: "IDI PalmWatch", target: "LLM Integration", strength: 3 },
+                { source: "IDI PalmWatch", target: "Team Management", strength: 3 },
+
 
                 // Position to Technical - updated
                 { source: "Data Science TA", target: "Python", strength: 4 },
@@ -141,6 +148,7 @@ export default class SkillsVisualization {
                 { source: "Thesis Research", target: "Privacy Rights", strength: 4 },
                 { source: "Thesis Research", target: "AI Governance", strength: 4 },
                 { source: "Data Science TA", target: "Data Ethics", strength: 3 },
+
 
                 // Leadership & Domain Connections
                 { source: "MUN President", target: "International Relations", strength: 4 },
