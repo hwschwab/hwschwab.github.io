@@ -20,10 +20,10 @@ items:
       development projects. The findings will contribute to policy frameworks that ensure economic growth 
       serves human dignity and rights protection.
 
-  - title: "AI-Driven Analysis of Female Government Participation"
+  - title: "AI-Driven Analysis of Female Workforce Participation"
     description: >
       Applying machine learning and artificial intelligence methodologies to analyze patterns of female 
-      participation in government, with particular focus on identifying and addressing discrimination 
+      participation in the workforce, with particular focus on identifying and addressing discrimination 
       barriers. This research utilizes comprehensive regional datasets to predict participation patterns 
       in the absence of gender-based discrimination.
     subtitle: "Combating Gender Discrimination Through Data Science"
@@ -31,10 +31,10 @@ items:
       This project leverages multiple regional barometers including the Latinobarómetro and Arab Barometer, 
       which contain rich data on discrimination experiences and attitudes. By applying advanced AI/ML techniques 
       to this data, we can identify systemic patterns of exclusion and develop evidence-based interventions 
-      to promote women's political participation. The work directly contributes to the World Bank's goals 
-      of fostering inclusive governance structures worldwide.
+      to promote women's workforce participation. The project directly contributes to the World Bank's goals 
+      of fostering inclusive structures worldwide.
 
-  - title: "Thesis Research: Privacy Rights in the AI Era"
+  - title: "Thesis Research: The Right to be Forgotten in the Age of Artificial Intelligence: Meta's Implementation Problems"
     description: >
       Completed comprehensive research examining the right to be forgotten in the context of Large Language 
       Models, analyzing how artificial intelligence systems challenge traditional privacy frameworks. My thesis 
