@@ -70,6 +70,23 @@ className: research-page
 <div class="research-page">
   <div class="projects-grid">
     <div class="project-card">
+      <h3>Policy Implementation Paper: Moderation in Transition</h3>
+      <div class="project-status"><strong>Status:</strong> Completed 2025</div>
+      <div class="project-description">
+        Conducted comprehensive case study analyzing Twitter/X's content moderation transformation under Elon Musk's ownership, examining how organizational restructuring and cultural shifts fundamentally altered policy implementation. Applied street-level bureaucracy theory and administrative burden frameworks to reveal how the platform's shift from centralized to community-based moderation affected user safety outcomes, documenting measurable increases in hate speech and changes in platform governance.
+      </div>
+      <div class="keywords-container">
+        <span class="keyword">Policy Implementation</span>
+        <span class="keyword">Content Moderation</span>
+        <span class="keyword">Street-Level Bureaucracy</span>
+        <span class="keyword">Organizational Culture</span>
+        <span class="keyword">Digital Governance</span>
+        <span class="keyword">Social Media Policy</span>
+        <span class="keyword">Administrative Theory</span>
+        <span class="keyword">Platform Regulation</span>
+      </div>
+    </div>
+    <div class="project-card">
       <h3>Data and Democracy: Historical Voting Records Dataset</h3>
       <div class="project-status"><strong>Status:</strong> Completed 2024</div>
       <div class="project-description">
