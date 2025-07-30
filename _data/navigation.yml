@@ -1,4 +1,6 @@
 main:
+  - resume: "Resume"
+    url: https://hwschwab.github.io/assets/docs/Schwab_Harper_Thesis.pdf
   - title: "About"
     url: /
   - title: "Skills"
