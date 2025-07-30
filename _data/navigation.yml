@@ -1,5 +1,5 @@
 main:
-  - resume: "Resume"
+  - title: "Resume"
     url: https://hwschwab.github.io/assets/docs/Harper_Schwab_Resume_.pdf.pdf
   - title: "About"
     url: /
