@@ -1,18 +1,44 @@
-@mixin transition($property: all, $duration: 0.2s) {
-  transition: $property $duration ease-in-out;
-}
-
 @mixin mobile {
   @media (max-width: map-get($layout, 'mobile-breakpoint')) {
     @content;
   }
 }
 
-@mixin card {
-  background: map-get($colors, 'white');
+// A raised beveled panel, like a period window/button in its default state
+@mixin bevel-outset {
+  border: 2px outset $paper;
+  border-radius: 0;
+}
+
+// A pressed/sunken beveled panel, used for hover/active states and wells
+@mixin bevel-inset {
+  border: 2px inset $paper;
+  border-radius: 0;
+}
+
+// Embossed groove rule — light edge bottom/right, dark edge top/left
+@mixin groove-rule {
+  border: none;
+  border-top: 1px solid $hairline;
+  border-bottom: 1px solid $true-white;
+  height: 0;
+  margin: map-get($spacing, 'unit') 0;
+}
+
+// Small uppercase sans label used for eyebrows, dates, metadata
+@mixin mono-label {
+  font-family: $font-sans;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.75rem;
+  color: $meta;
+}
+
+// Content panel: paper background inside a bordered, non-rounded frame
+@mixin panel {
+  background: $paper;
   padding: map-get($spacing, 'card');
-  border-radius: map-get($layout, 'border-radius');
-  box-shadow: map-get($shadows, 'card');
+  @include bevel-outset;
 }
 
 @mixin flex-center {

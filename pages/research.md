@@ -7,7 +7,7 @@ className: research-page
 
 ## My Thesis
 
-<div class="thesis-section">
+<div class="thesis-section" id="thesis">
   <div class="activity-pair">
     <div class="activity-card">
       <h3>The Right to Be Forgotten in the Age of Artificial Intelligence</h3>
@@ -86,7 +86,7 @@ className: research-page
         <span class="keyword">Platform Regulation</span>
       </div>
     </div>
-    <div class="project-card">
+    <div class="project-card" id="data-and-democracy">
       <h3>Data and Democracy: Historical Voting Records Dataset</h3>
       <div class="project-status"><strong>Status:</strong> Completed 2024</div>
       <div class="project-description">
@@ -102,7 +102,7 @@ className: research-page
       </div>
     </div>
 
-    <div class="project-card">
+    <div class="project-card" id="idi-palmwatch">
       <h3>Inclusive Development International (IDI) / PalmWatch Enhancement</h3>
       <div class="project-status"><strong>Status:</strong> Completed 2024</div>
       <div class="project-description">

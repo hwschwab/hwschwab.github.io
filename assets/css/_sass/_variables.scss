@@ -1,36 +1,67 @@
-// Individual color variables for direct access
-$white: #fff;
-$primary: #2b4c7e;
-$secondary: #567eae;
-$text: #333;
-$light-gray: #f5f5f5;
-$medium-gray: #666;
-$grey: #828282;
+// STYLE.md palette — framed 1990s application-window aesthetic
+$page-bg: #D8D6CC;   // warm gray desktop background
+$paper: #F7F5EF;      // frame/content background
+$ink: #1A1917;         // primary text
+$meta: #5C594F;        // secondary/meta text
+$navy: #1F3A5F;        // titlebar / single accent color
+$maroon: #7A2331;      // link-hover only
+$hairline: #C9C3AE;    // hairlines / table borders
+$true-white: #fff;     // used only for bevel highlight edges
 
-// Maps for systematic usage
+$link: #1A4B8C;
+$link-visited: #5B3E7A;
+$link-hover: #7A2331;
+
+// Maps for systematic usage — keys kept generic so existing rules
+// referencing map-get($colors, ...) resolve to the new palette
 $colors: (
-  'primary': $primary,
-  'secondary': $secondary,
-  'text': $text,
-  'light-gray': $light-gray,
-  'medium-gray': $medium-gray,
-  'white': $white,
-  'grey': $grey
+  'page-bg': $page-bg,
+  'paper': $paper,
+  'ink': $ink,
+  'meta': $meta,
+  'navy': $navy,
+  'maroon': $maroon,
+  'hairline': $hairline,
+  'white': $paper,
+  'true-white': $true-white,
+  'text': $ink,
+  'medium-gray': $meta,
+  'light-gray': $hairline,
+  'dark-gray': $meta,
+  'border': $hairline,
+  'tag-bg': $paper,
+  'link': $link,
+  'link-visited': $link-visited,
+  'link-hover': $link-hover,
+  // legacy keys some partials still reference — repointed to the new palette
+  'primary': $navy,
+  'secondary': $meta,
+  'grey': $meta
 );
 
 $spacing: (
   'unit': 1rem,
-  'section': 4rem,
-  'card': 2rem
+  'section': 3rem,
+  'card': 1.5rem,
+  'large': 2rem
 );
 
 $layout: (
-  'max-width': 1200px,
-  'border-radius': 8px,
+  'max-width': 960px,
+  'border-radius': 0,
   'mobile-breakpoint': 768px
 );
 
+// Retro bevel borders replace soft drop shadows
+$bevel-outset: 2px outset $paper;
+$bevel-inset: 2px inset $paper;
 $shadows: (
-  'card': 0 2px 8px rgba(0, 0, 0, 0.1),
-  'header': 0 2px 8px rgba(0, 0, 0, 0.2)
+  'card': none,
+  'header': none,
+  'frame': 3px 3px 0 rgba(26, 25, 23, 0.25)
 );
+
+// Font stacks
+$font-serif: Georgia, 'Times New Roman', Times, serif;
+$font-sans: Arial, Helvetica, sans-serif;
+$font-mono: 'IBM Plex Mono', 'Courier New', Courier, monospace;

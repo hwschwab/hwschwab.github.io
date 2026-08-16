@@ -34,22 +34,21 @@ className: experience-page
 
 ## Current Work
 
-<div class="experience-item">
+<div class="experience-item" id="sri-international">
   <div class="experience-header">
     <div>
-      <div class="organization">The World Bank</div>
-      <div class="role">Data Science and Human Rights Research Specialist</div>
-      <div class="subtitle">Data and Analytics Global Solutions Group, Social Development Global Department</div>
+      <div class="organization">SRI International</div>
+      <div class="role">Research Analyst</div>
+      <div class="subtitle">Supporting the National Science Foundation's Office of the Chief of Research Security Strategy and Policy (OCRSSP)</div>
     </div>
-    <div class="date">June 2025 - Present</div>
+    <div class="date">September 2025 - Present</div>
   </div>
 
   <div class="description">
     <ul>
-      <li>Leading research to define and scope the human rights economy through interdisciplinary legal and economic analysis</li>
-      <li>Applying advanced AI/ML methodologies to analyze female government participation patterns using regional barometer data (Latinobarómetro, Arab Barometer)</li>
-      <li>Contributing to the World Bank's mission of fostering inclusive growth for 2.3+ billion people globally facing social exclusion</li>
-      <li>Developing evidence-based interventions to combat gender discrimination in political participation</li>
+      <li>Develop policy implementation frameworks for research security, translating national security and technology policy into practical guidance for federal research funding programs</li>
+      <li>Work alongside federal partners to keep research security reviews aligned with evolving national security priorities</li>
+      <li>Apply data science and technical analysis skills to research security policy questions, building on prior work in AI/ML and human rights research</li>
     </ul>
   </div>
 </div>
@@ -57,7 +56,7 @@ className: experience-page
 ## Professional Experience
 
 {% for job in site.data.professional_experience %}
-<div class="experience-item">
+<div class="experience-item" id="{{ job.id }}">
   <div class="experience-header">
     <div>
       <div class="organization">{{ job.organization }}</div>
@@ -79,7 +78,7 @@ className: experience-page
 ## Leadership Experience
 
 {% for position in site.data.leadership_experience %}
-<div class="experience-item">
+<div class="experience-item" id="{{ position.id }}">
   <div class="experience-header">
     <div>
       <div class="organization">{{ position.organization }}</div>
@@ -118,6 +117,6 @@ className: experience-page
   <div class="resume-card">
     <h3>Professional Resume</h3>
     <p>Download my professional resume to learn more about my experience in data science, research, and human rights work.</p>
-    <a href="{{ site.baseurl }}/assets/docs/Schwab_Harper_Resume.pdf" class="resume-download" download="">Download Resume</a>
+    <a href="{{ site.baseurl }}/assets/docs/Harper_Schwab_Resume_2026.pdf" class="resume-download" download="">Download Resume</a>
   </div>
 </div>

@@ -1,38 +1,23 @@
 intro: >
-  I am currently working as a Data Science and Human Rights Research Specialist at the World Bank, 
-  where I combine my academic background in data science and human rights to address global challenges. 
-  My work focuses on using advanced AI/ML methodologies to promote inclusive growth and combat discrimination, 
-  contributing to the World Bank's mission of fostering opportunities for the 2.3+ billion people globally 
-  facing social exclusion.
+  I am currently working as a Research Analyst at SRI International, supporting the National Science
+  Foundation's Office of the Chief of Research Security Strategy and Policy (OCRSSP). My work focuses on
+  translating national security and technology policy into practical implementation frameworks for federal
+  research programs, building on my academic background in data science and human rights and my continued
+  interest in the intersection of technology, policy, and governance.
 
 items:
-  - title: "Human Rights Economy Research"
+  - title: "Research Security Policy at SRI International"
     description: >
-      Leading research to define and scope the emerging field of the human rights economy through 
-      interdisciplinary legal and economic analysis. This foundational work aims to establish frameworks 
-      for understanding how human rights principles can be integrated into economic systems and policy-making 
-      at a global scale.
-    subtitle: "Innovative Research at the Intersection of Rights and Economics"
+      Supporting the National Science Foundation's Office of the Chief of Research Security Strategy and
+      Policy (OCRSSP) as a Research Analyst at SRI International, developing policy implementation
+      frameworks for research security across federal funding programs.
+    subtitle: "Translating Policy Into Practice"
     details: >
-      This project represents work in a developing field that bridges traditional human rights 
-      advocacy with economic development strategies. As this research is in its scoping phases, it will lay 
-      groundwork for future World Bank initiatives that embed human rights considerations into economic 
-      development projects. The findings will contribute to policy frameworks that ensure economic growth 
-      serves human dignity and rights protection.
-
-  - title: "AI-Driven Analysis of Female Workforce Participation"
-    description: >
-      Applying machine learning and artificial intelligence methodologies to analyze patterns of female 
-      participation in the workforce, with particular focus on identifying and addressing discrimination 
-      barriers. This research utilizes comprehensive regional datasets to predict participation patterns 
-      in the absence of gender-based discrimination.
-    subtitle: "Combating Gender Discrimination Through Data Science"
-    details: >
-      This project leverages multiple regional barometers including the Latinobarómetro and Arab Barometer, 
-      which contain rich data on discrimination experiences and attitudes. By applying advanced AI/ML techniques 
-      to this data, we can identify systemic patterns of exclusion and develop evidence-based interventions 
-      to promote women's workforce participation. The project directly contributes to the World Bank's goals 
-      of fostering inclusive structures worldwide.
+      This work involves interpreting national security and technology policy developments and translating
+      them into practical guidance for research security reviews, working alongside federal partners to keep
+      funding programs aligned with evolving national security priorities. It builds on the same interest in
+      the intersection of technology, policy, and governance that has run through my human rights and data
+      science work.
 
   - title: "Thesis Research: The Right to be Forgotten in the Age of Artificial Intelligence: Meta's Implementation Problems"
     description: >

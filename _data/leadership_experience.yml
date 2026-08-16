@@ -1,4 +1,5 @@
-- organization: "Model United Nations (MUN)"
+- id: "mun-president"
+  organization: "Model United Nations (MUN)"
   role: "President"
   date: "June 2022 - June 2025"
   description: >
@@ -18,3 +19,31 @@
     the cornerstone of my undergraduate leadership journey, providing invaluable lessons in building and maintaining
     high-performing teams while fostering a supportive community atmosphere. Successfully managed an annual budget
     of $82,000+ and directed strategic resource allocation to increase conference participation nationwide.
+
+- id: "pozen-human-rights-leader"
+  organization: "Pozen Center for Human Rights"
+  role: "Human Rights Leader"
+  date: "January 2022 - June 2025"
+  description: >
+    As a Human Rights Leader with the Pozen Center, I planned and executed career development workshops for
+    undergraduate and graduate students studying human rights, helping connect them to resources, networking,
+    and internship opportunities. I also formulated event agendas for high-profile speakers, including UN
+    officials and visiting scholars, and oversaw logistics such as ticketing, venue selection, and catering.
+  subtitle: "Career Development and Speaker Programming"
+  details: >
+    This role complemented my research work with the Pozen Center's Global Human Rights Lab by focusing on
+    building the pipeline of students entering human rights work — connecting them with practitioners,
+    scholars, and career opportunities in the field.
+
+- id: "uchicago-democrats"
+  organization: "UChicago Democrats"
+  role: "Vice President"
+  date: "September 2021 - June 2023"
+  description: >
+    As Vice President of UChicago Democrats, I helped increase meeting retention following the 2020
+    presidential election by partnering with the University-affiliated Institute of Politics to bring
+    high-profile speakers to campus each quarter.
+  subtitle: "Membership and Community Engagement"
+  details: >
+    I started UCDems community service projects to build connections with students who weren't primarily
+    politically motivated, helping maintain club membership levels beyond the post-election engagement spike.

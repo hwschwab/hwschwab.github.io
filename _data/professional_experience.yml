@@ -1,19 +1,31 @@
-- organization: Data Science Institute, University of Chicago
-  role: Teaching Assistant
+- id: the-world-bank
+  organization: The World Bank
+  role: Summer Research Assistant
+  date: June 2025 - August 2025
+  description:
+    - Co-authored a research paper introducing a theoretical framework integrating human rights and economic analysis, including a synthesis of 100+ papers for literature review (paper in revisions)
+    - Applied machine learning techniques to measure the statistical impact of gender discrimination on female labor force participation for future World Bank efforts in Latin America
+
+- id: data-science-institute
+  organization: Data Science Institute, University of Chicago
+  role: Technical Project Manager
   date: September 2024 - June 2025
   description:
-    - Led technical project management for two NGO/non-profit client teams, directing deliverables and mentoring students in ML/AI/LLM integration
+    - Led technical project management for two teams of 8+ students working for non-profit clients, directing deliverables, standardizing operating procedures, and mentoring students on AI workflow integration
     - Implemented reproducible development environments using Docker and Make to ensure consistent testing and deployment across diverse teams
+    - Developed an automated data pipeline with 12 custom web scrapers generating 1,000+ validated public human rights records while directing a 6-person team using LLMs to process data
     - Received Excellence in Data Science Award for outstanding work in the Data Science Clinic
 
-- organization: Pozen Center For Human Rights, University of Chicago
+- id: global-human-rights-lab
+  organization: Global Human Rights Lab, University of Chicago
   role: Research Assistant
   date: October 2024 - June 2025
   description:
     - Collaborated with the Global Human Rights Clinic at UChicago Law to compile country reports on family rights and police killings for the Special Rapporteur on Extrajudicial Killings' report to UN General Assembly
     - Analyzed laws and institutions to assess state protections for families after extrajudicial killings in Ukraine, India, England, and Kenya
 
-- organization: Results for America
+- id: results-for-america
+  organization: Results for America
   role: Data Science and Research Intern
   date: June 2024 - August 2024
   description:
@@ -21,15 +33,8 @@
     - Facilitated reuse by senior management to demonstrate impact of data-driven policy
     - Created 200+ visualizations to identify the rural-urban divide in US government funding
 
-- organization: Global Human Rights Lab, University of Chicago
-  role: Research Assistant
-  date: June 2023 - June 2025
-  description:
-    - Conducted research on human rights violations and policy implications
-    - Analyzed data patterns to identify systemic issues and potential solutions
-    - Collaborated with international partners to document and investigate cases
-
-- organization: Data Cognition Lab, University of Chicago
+- id: data-cognition-lab
+  organization: Data Cognition Lab, University of Chicago
   role: Research Assistant
   date: January 2023 - June 2023
   description:

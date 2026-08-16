@@ -1,110 +1,211 @@
-// First define the base card class
-.card {
-  background: map-get($colors, 'white');
-  padding: map-get($spacing, 'card');
-  border-radius: map-get($layout, 'border-radius');
-  box-shadow: map-get($shadows, 'card');
-}
-
-// Activity Cards
-.activity-pair {
-  @include grid-responsive;
-  margin-bottom: map-get($spacing, 'section');
-  @extend .card;
+// ------------------------------------------------------------------
+// Window frame — the whole page sits inside a single framed window
+// ------------------------------------------------------------------
+.window-frame {
+  max-width: map-get($layout, 'max-width');
+  margin: 2rem auto;
+  background: $paper;
+  border: 2px outset $paper;
+  box-shadow: map-get($shadows, 'frame');
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 4rem);
 
   @include mobile {
-    grid-template-columns: 1fr;
-  }
-
-  &:not(:last-child) {
-    margin-bottom: map-get($spacing, 'card');
-    border-bottom: 2px solid map-get($colors, 'light-gray');
+    margin: 0;
+    min-height: 100vh;
+    border-width: 0 0 2px 0;
   }
 }
 
-.activity-card {
-  padding: map-get($spacing, 'card');
-  height: 100%;
-
-  h3 {
-    color: map-get($colors, 'primary');
-    margin-bottom: map-get($spacing, 'unit');
-  }
-}
-
-// Resume Section
-.resume-section {
-  @include grid-responsive;
-}
-
-.resume-card {
-  @extend .card;
-  text-align: center;
-}
-
-.resume-download {
-  display: inline-block;
-  padding: 0.8rem 1.5rem;
-  background: map-get($colors, 'primary');
-  color: map-get($colors, 'white');
-  border-radius: map-get($layout, 'border-radius');
-  margin-top: map-get($spacing, 'unit');
-  @include transition;
-  
-  &:hover {
-    background: lighten(map-get($colors, 'primary'), 10%);
-  }
-}
-
-
-// PUBLICATION
-.publication-card {
-  border: 1px solid map-get($colors, 'border');
-  border-radius: 8px;
-  padding: map-get($spacing, 'card');
-  margin-bottom: map-get($spacing, 'large');
-  background: white;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  
-  &:hover {
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: box-shadow 0.3s ease;
-  }
-}
-
-.chicago-citation {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: map-get($colors, 'text');
-  margin-bottom: map-get($spacing, 'unit');
-}
-
-.publication-tags {
-  margin-top: map-get($spacing, 'card');
+.titlebar {
+  background: $navy;
+  color: $paper;
+  font-family: $font-sans;
+  font-size: 0.875rem;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
   display: flex;
-  flex-wrap: wrap;
-  gap: map-get($spacing, 'unit');
-  
-  .tag {
-    background: map-get($colors, 'tag-bg');
-    padding: 0.25rem 0.75rem;
-    border-radius: 16px;
-    font-size: 0.875rem;
-    color: map-get($colors, 'medium-gray');
-    
+  align-items: center;
+  letter-spacing: 0.02em;
+}
+
+// ------------------------------------------------------------------
+// Header / masthead / nav
+// ------------------------------------------------------------------
+.site-header {
+  background: $paper;
+  border-bottom: 1px solid $hairline;
+  padding: 1rem;
+
+  .header-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
   }
+
+  .site-title {
+    font-family: $font-serif;
+    color: $ink;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    &:hover {
+      color: $ink;
+    }
+
+    span {
+      display: inline-block;
+    }
+  }
+
+  .site-location {
+    @include mono-label;
+  }
+}
+
+.main-nav {
+  .nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 0.5rem;
+  }
+
+  .nav-link {
+    @include mono-label;
+    display: inline-block;
+    color: $ink;
+    text-decoration: none;
+    background: $page-bg;
+    padding: 0.4rem 0.9rem;
+    @include bevel-outset;
+
+    &:hover,
+    &:active {
+      @include bevel-inset;
+    }
+  }
+
+  // legacy toggle markup, if still present in markup, stays hidden
+  .nav-toggle,
+  .nav-toggle-label {
+    display: none;
+  }
+}
+
+// ------------------------------------------------------------------
+// Section headers — render every h2 as a small outset toolbar bar
+// ------------------------------------------------------------------
+h2 {
+  @include mono-label;
+  font-size: 0.85rem;
+  color: $ink;
+  background: $page-bg;
+  @include bevel-outset;
+  padding: 0.5rem 0.75rem;
+  margin: map-get($spacing, 'section') 0 map-get($spacing, 'unit');
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+h3 {
+  font-family: $font-serif;
+  font-size: 1.1rem;
+  color: $navy;
+  margin: map-get($spacing, 'unit') 0 0.5rem;
+}
+
+hr {
+  @include groove-rule;
 }
 
 em {
   font-style: italic;
 }
 
-a {
-  color: map-get($colors, 'link');
+// ------------------------------------------------------------------
+// Panels (formerly "cards") — bordered, square-cornered, no shadow
+// ------------------------------------------------------------------
+.card,
+.activity-card,
+.resume-card,
+.blog-card,
+.publication-card,
+.project-card {
+  @include panel;
+}
+
+.activity-pair {
+  @include grid-responsive;
+  margin-bottom: map-get($spacing, 'card');
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.activity-card h3 {
+  margin-top: 0;
+}
+
+// Resume section
+.resume-section {
+  @include grid-responsive;
+}
+
+.resume-card {
+  text-align: center;
+}
+
+.resume-download {
+  display: inline-block;
+  font-family: $font-sans;
+  padding: 0.6rem 1.25rem;
+  background: $page-bg;
+  color: $ink;
   text-decoration: none;
-  
+  margin-top: map-get($spacing, 'unit');
+  @include bevel-outset;
+
+  &:hover,
+  &:active {
+    @include bevel-inset;
+    color: $ink;
+  }
+}
+
+// Publications
+.chicago-citation {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: $ink;
+  margin-bottom: map-get($spacing, 'unit');
+}
+
+.publication-tags {
+  margin-top: map-get($spacing, 'unit');
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag,
+.keyword {
+  @include mono-label;
+  background: transparent;
+  border: 1px solid $hairline;
+  padding: 0.2rem 0.6rem;
+  color: $meta;
+
   &:hover {
-    text-decoration: underline;
+    border-color: $navy;
+    color: $navy;
   }
 }
 
@@ -113,250 +214,90 @@ a {
   @include grid-responsive;
 }
 
-.blog-card {
-  @extend .card;
-  overflow: hidden;
-}
-
-// Header & Footer shared styles
+// ------------------------------------------------------------------
+// Footer
+// ------------------------------------------------------------------
 %site-wrapper {
   max-width: map-get($layout, 'max-width');
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 0 map-get($spacing, 'unit');
-
-  @include mobile {
-    flex-direction: column;
-    text-align: center;
-    padding: map-get($spacing, 'unit');
-    position: relative;
-  }
 }
-
-.site-header {
-  background: map-get($colors, 'primary');
-  width: 100%;
-  padding: 1rem;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  box-shadow: map-get($shadows, 'header');
-
-  .header-wrapper {
-    @extend %site-wrapper;
-  }
-
-  .site-title {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.5rem;
-    font-weight: bold;
-    z-index: 1001; // Keep title above mobile menu
-  }
-
-  .main-nav {
-    @include mobile {
-      width: 100%;
-    }
-  }
-
-  .nav-list {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    gap: 1rem;
-
-    @include mobile {
-      flex-direction: column;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      background: map-get($colors, 'primary');
-      padding: 1rem 0;
-      display: none;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
-      li {
-        width: 100%;
-        text-align: center;
-      }
-    }
-  }
-
-  .nav-link {
-    color: #fff;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    transition: all 0.3s ease;
-    display: block;
-
-    @include mobile {
-      padding: 1rem;
-      width: 100%;
-      
-      &:hover {
-        background: rgba(255, 255, 255, 0.1);
-      }
-    }
-  }
-
-  .nav-toggle {
-    display: none;
-
-    &:checked {
-      @include mobile {
-        & ~ .nav-list {
-          display: flex;
-        }
-
-        & ~ .nav-toggle-label span {
-          &:nth-child(1) {
-            transform: rotate(45deg) translate(5px, 5px);
-          }
-
-          &:nth-child(2) {
-            opacity: 0;
-          }
-
-          &:nth-child(3) {
-            transform: rotate(-45deg) translate(7px, -7px);
-          }
-        }
-      }
-    }
-  }
-
-  .nav-toggle-label {
-    display: none;
-    
-    @include mobile {
-      display: block;
-      position: absolute;
-      right: 1rem;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 30px;
-      height: 24px;
-      cursor: pointer;
-      z-index: 1001;
-
-      span {
-        display: block;
-        position: absolute;
-        height: 2px;
-        width: 100%;
-        background: #fff;
-        transition: all 0.3s ease;
-
-        &:nth-child(1) { top: 0; }
-        &:nth-child(2) { top: 50%; transform: translateY(-50%); }
-        &:nth-child(3) { bottom: 0; }
-      }
-    }
-  }
-}
-
-
 
 .site-footer {
-  background: map-get($colors, 'primary');
-  color: map-get($colors, 'white');
-  width: 100vw;
-  padding: 2rem 0;
+  background: $paper;
+  color: $meta;
+  border-top: 1px solid $hairline;
+  padding: 1.5rem 1rem;
   margin-top: auto;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+  font-family: $font-sans;
+  font-size: 0.8rem;
 
   .footer-wrapper {
     @extend %site-wrapper;
-    flex-direction: column;
   }
 
   .footer-content {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 0.5rem;
     text-align: center;
   }
 
   .site-description {
-    font-size: 1.1rem;
-    max-width: 600px;
     margin: 0;
-    opacity: 0.9;
+  }
+
+  .site-badge {
+    @include mono-label;
+    @include bevel-outset;
+    background: $page-bg;
+    padding: 0.2rem 0.6rem;
+    color: $ink;
   }
 
   .social-links {
     display: flex;
-    gap: 1.5rem;
-    margin-top: 0.5rem;
+    gap: 1rem;
     justify-content: center;
 
     a {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 2.5rem;
-      height: 2.5rem;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.1);
-      transition: all 0.2s ease-in-out;
-      color: map-get($colors, 'white');
+      width: 2rem;
+      height: 2rem;
+      color: $ink;
 
       svg {
-        width: 1.2rem;
-        height: 1.2rem;
+        width: 1.1rem;
+        height: 1.1rem;
         fill: currentColor;
       }
 
       &:hover {
-        transform: translateY(-2px);
-        background: rgba(255, 255, 255, 0.2);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      }
-
-      &:active {
-        transform: translateY(-1px);
+        color: $link-hover;
       }
     }
   }
 }
 
-// Individual icon hover effects
-.social-links {
-  a[aria-label="GitHub"]:hover {
-    color: #f0f6fc;
-  }
-
-  a[aria-label="LinkedIn"]:hover {
-    color: #0a66c2;
-  }
-
-  a[aria-label="Email"]:hover {
-    color: #ea4335;
-  }
-}
-// Skills
+// ------------------------------------------------------------------
+// Skills visualization container (base; page-specific overrides live
+// in pages/_skills.scss)
+// ------------------------------------------------------------------
 .skills-visualization-container {
-  @extend .card;
   position: relative;
   width: 100%;
   height: 800px;
   margin: map-get($spacing, 'unit') 0;
   overflow: hidden;
+  @include panel;
+  padding: 0;
 }
 
 .skills-tooltip {
   position: fixed;
   visibility: hidden;
   pointer-events: none;
-  transition: transform 0.1s ease-out;
 }

@@ -1,7 +1,8 @@
 <footer class="site-footer">
   <div class="footer-wrapper">
     <div class="footer-content">
-      <p class="site-description">{{ site.description }}</p>
+      <p class="site-description">&copy; {{ site.time | date: "%Y" }} {{ site.title }}. Site last revised {{ site.time | date: "%B %Y" }}.</p>
+      <span class="site-badge">Static, trackerless site — no analytics, no cookies</span>
       {% include social-icons.html %}
     </div>
   </div>
