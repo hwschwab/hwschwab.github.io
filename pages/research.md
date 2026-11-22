@@ -18,8 +18,6 @@ className: research-page
       <p><strong>Faculty Advisor:</strong> Lake Polan<br>
       <strong>Submitted to:</strong> Pozen Center for Human Rights<br>
       <strong>Completed:</strong> June 2025</p>
-      
-      <a href="{{ site.baseurl }}/assets/docs/Schwab_Harper_Thesis.pdf" class="resume-download" download="">Download Full Thesis (PDF)</a>
     </div>
 
     <div class="activity-card">
